@@ -80,6 +80,8 @@ card.innerHTML = `
 
 <img
 
+class="visitorImage"
+
 src="${
 visitor.photo_url
 ||
