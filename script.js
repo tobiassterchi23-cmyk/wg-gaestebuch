@@ -40,13 +40,29 @@ async function loadHomePage() {
 
     // Besucheranzahl anzeigen
 
+    // Besucheranzahl anzeigen
+
+if(data.length === 1){
+
     document.getElementById(
         "visitorCount"
     ).textContent =
 
-        "Bereits "
-        + data.length
-        + " Besucher haben sich verewigt.";
+    "👥 Bereits 1 Besucher hat die WG verewigt.";
+
+}
+
+else{
+
+    document.getElementById(
+        "visitorCount"
+    ).textContent =
+
+    "👥 Bereits "
+    + data.length
+    + " Besucher haben die WG verewigt.";
+
+}
 
 
 
@@ -123,7 +139,6 @@ else{
         )
 
     );
-
 
 
     localStorage.setItem(

@@ -265,3 +265,31 @@ button:active{
 
 
 }
+#visitorCount {
+
+
+    max-width:350px;
+
+
+    margin:30px auto;
+
+
+    padding:15px 20px;
+
+
+    text-align:center;
+
+
+    font-size:18px;
+
+
+    background:#eeeeee;
+
+
+    border-radius:15px;
+
+
+    border-left:6px solid #888;
+
+
+}
