@@ -214,3 +214,54 @@ button{
 
 
 }
+
+button {
+
+
+    background:white;
+
+
+    border:none;
+
+
+    padding:14px 25px;
+
+
+    font-size:18px;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.15);
+
+
+    margin:8px;
+
+
+}
+
+
+
+button:hover{
+
+
+    transform:scale(1.03);
+
+
+}
+
+
+
+button:active{
+
+
+    transform:scale(0.98);
+
+
+}

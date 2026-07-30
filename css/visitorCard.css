@@ -384,3 +384,37 @@ body {
 
 
 }
+
+button {
+
+
+    background:white;
+
+
+    border:none;
+
+
+    padding:14px 25px;
+
+
+    font-size:17px;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.15);
+
+
+    display:block;
+
+
+    margin:15px auto;
+
+
+}
