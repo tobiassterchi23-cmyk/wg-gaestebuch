@@ -60,19 +60,59 @@ async function loadHomePage() {
 
 
 
-    // Zufälligen Besucher auswählen
+    let randomVisitor;
 
-    const randomVisitor =
 
-        data[
+const today =
+
+new Date()
+.toISOString()
+.split("T")[0];
+
+
+
+const savedDate =
+
+localStorage.getItem(
+"dailyVisitorDate"
+);
+
+
+
+const savedVisitor =
+
+localStorage.getItem(
+"dailyVisitor"
+);
+
+
+
+
+if(
+savedDate === today
+&&
+savedVisitor
+){
+
+    randomVisitor =
+    JSON.parse(
+        savedVisitor
+    );
+
+}
+
+else{
+
+
+    randomVisitor =
+
+    data[
         Math.floor(
             Math.random() * data.length
         )
-        ];
+    ];
 
 
-
-    // Für den Button speichern
 
     localStorage.setItem(
 
@@ -83,6 +123,19 @@ async function loadHomePage() {
         )
 
     );
+
+
+
+    localStorage.setItem(
+
+        "dailyVisitorDate",
+
+        today
+
+    );
+
+
+}
 
 
 

@@ -151,3 +151,65 @@ box-sizing:border-box;
     margin-bottom:10px;
 
 }
+
+@media (max-width:600px){
+
+
+.visitorGrid{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:12px;
+
+
+}
+
+
+
+.visitor-card{
+
+
+    padding:10px;
+
+
+}
+
+
+
+.visitorImage{
+
+
+    width:75px;
+
+
+    height:75px;
+
+
+}
+
+
+
+.visitor-card h2{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+.visitor-card p{
+
+
+    font-size:13px;
+
+
+}
+
+
+}
