@@ -1,3 +1,121 @@
+async function compressImage(file){
+
+
+    return new Promise((resolve)=>{
+
+
+        const image = new Image();
+
+
+        image.onload = function(){
+
+
+            const canvas =
+            document.createElement(
+                "canvas"
+            );
+
+
+            const maxSize = 800;
+
+
+            let width =
+            image.width;
+
+
+            let height =
+            image.height;
+
+
+
+            if(width > height){
+
+                if(width > maxSize){
+
+                    height =
+                    height *
+                    maxSize /
+                    width;
+
+                    width =
+                    maxSize;
+
+                }
+
+            }
+
+            else{
+
+                if(height > maxSize){
+
+                    width =
+                    width *
+                    maxSize /
+                    height;
+
+                    height =
+                    maxSize;
+
+                }
+
+            }
+
+
+            canvas.width =
+            width;
+
+
+            canvas.height =
+            height;
+
+
+            const context =
+            canvas.getContext("2d");
+
+
+            context.drawImage(
+
+                image,
+
+                0,
+
+                0,
+
+                width,
+
+                height
+
+            );
+
+
+            canvas.toBlob(
+
+                function(blob){
+
+                    resolve(blob);
+
+                },
+
+                "image/jpeg",
+
+                0.8
+
+            );
+
+
+        };
+
+
+        image.src = URL.createObjectURL(
+            file
+        );
+
+
+    });
+
+
+}
+
 function calculateAge(birthday) {
 
     if (!birthday) {
@@ -285,6 +403,10 @@ async function uploadPhoto(file){
 
         + file.name;
 
+        const compressedImage =
+
+await compressImage(file);
+
 
     console.log(
         "Dateiname:"
@@ -304,11 +426,11 @@ async function uploadPhoto(file){
 
     .upload(
 
-        fileName,
+    fileName,
 
-        file
+    compressedImage
 
-    );
+);
 
 
     if(error){
