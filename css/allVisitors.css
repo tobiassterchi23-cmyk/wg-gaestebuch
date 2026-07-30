@@ -109,6 +109,52 @@ h1 {
 
 .visitor-card p {
 
-    margin:8px;
+    margin:6px 0;
+
+    font-size:15px;
+
+}
+
+#searchInput{
+
+
+display:block;
+
+
+width:80%;
+
+max-width:400px;
+
+
+margin:20px auto 40px auto;
+
+
+padding:12px 18px;
+
+
+font-size:18px;
+
+
+border-radius:25px;
+
+
+border:1px solid #ccc;
+
+
+box-sizing:border-box;
+
+
+}
+
+.visitor-card h2 {
+
+    margin-bottom:10px;
+
+}
+
+
+.visitor-card {
+
+    min-height:300px;
 
 }

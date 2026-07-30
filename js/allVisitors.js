@@ -115,6 +115,38 @@ Besucher #${visitor.visitor_number}
 
 </p>
 
+
+<p>
+
+${visitor.legend_status || ""}
+
+</p>
+
+
+<p>
+
+${
+visitor.visit_date
+?
+new Date(visitor.visit_date)
+.toLocaleDateString("de-CH")
+:
+""
+}
+
+</p>
+
+
+${
+visitor.easter_egg
+?
+"<p>⭐ " + visitor.easter_egg + "</p>"
+:
+""
+}
+
+;
+
 `;
 
 
@@ -161,7 +193,10 @@ const searchText =
 
 document.getElementById(
 "searchInput"
-).value.toLowerCase();
+)
+.value
+.toLowerCase()
+.trim();
 
 
 
@@ -177,11 +212,23 @@ visitor.name
 .toLowerCase()
 .includes(searchText)
 
+
 ||
+
 
 String(
 visitor.visitor_number
-).includes(searchText)
+)
+.includes(searchText)
+
+
+||
+
+
+(visitor.legend_status || "")
+.toLowerCase()
+.includes(searchText)
+
 
 );
 
