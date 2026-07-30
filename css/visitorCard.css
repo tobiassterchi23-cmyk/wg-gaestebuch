@@ -1,0 +1,327 @@
+body {
+
+    margin:0;
+
+    padding:20px;
+
+    font-family:Arial,sans-serif;
+
+    background:#f5f5f5;
+
+}
+
+
+
+.visitor-card {
+
+
+    max-width:600px;
+
+
+    margin:auto;
+
+
+    background:white;
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+    text-align:center;
+
+}
+
+
+
+
+#visitorPhoto {
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+#visitorName {
+
+
+    font-size:40px;
+
+    margin:10px;
+
+
+}
+
+
+
+#visitorNumber {
+
+
+    color:#777;
+
+
+}
+
+
+
+#visitorStatus {
+
+
+    font-size:22px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+#visitorBadge {
+
+
+    font-size:28px;
+
+
+}
+
+
+
+#visitorEasterEgg {
+
+
+    margin-top:20px;
+
+
+    padding:15px;
+
+
+    background:#fff3cd;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+
+hr {
+
+    margin:30px 0;
+
+}
+
+
+
+
+
+.info p,
+.questions p {
+
+
+    text-align:left;
+
+
+    padding:10px;
+
+
+    border-radius:10px;
+
+
+    background:#fafafa;
+
+
+}
+
+
+
+.footer {
+
+
+    margin-top:30px;
+
+
+    font-style:italic;
+
+
+    color:#777;
+
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background:#f5f5f5;
+
+    padding:20px;
+
+}
+
+
+
+.visitorCard {
+
+
+    max-width:500px;
+
+
+    margin:auto;
+
+
+    background:white;
+
+
+    border-radius:30px;
+
+
+    padding:25px;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+.cardHeader {
+
+    text-align:center;
+
+}
+
+
+
+.profileImage {
+
+
+    width:180px;
+
+
+    height:180px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+#visitorName {
+
+    margin-bottom:5px;
+
+}
+
+
+
+.badgeArea {
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+
+
+.infoBox {
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+.infoBox p {
+
+
+    border-bottom:1px solid #eee;
+
+
+    padding-bottom:10px;
+
+
+}
+
+
+
+.footerMessage {
+
+
+    text-align:center;
+
+
+    margin-top:30px;
+
+
+    font-style:italic;
+
+
+}
+
+#visitorBadge {
+
+
+    font-size:20px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+#visitorEasterEgg {
+
+
+    margin-top:20px;
+
+
+    padding:15px;
+
+
+    background:#fff3cd;
+
+
+    border-radius:15px;
+
+
+    font-weight:bold;
+
+
+}

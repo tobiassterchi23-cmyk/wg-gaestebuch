@@ -1,0 +1,160 @@
+body {
+
+
+    font-family: Arial, sans-serif;
+
+
+    background:#f5f5f5;
+
+
+    padding:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+h1 {
+
+
+    font-size:40px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+h3 {
+
+
+    font-weight:normal;
+
+
+}
+
+
+
+button {
+
+
+    width:100%;
+
+
+    max-width:350px;
+
+
+    padding:18px;
+
+
+    margin:10px;
+
+
+    font-size:20px;
+
+
+    border:none;
+
+
+    border-radius:25px;
+
+
+    background:white;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+button:active {
+
+
+    transform:scale(0.97);
+
+
+}
+
+
+
+#visitorOfDay {
+
+
+    margin:30px auto;
+
+
+    padding:25px;
+
+
+    max-width:350px;
+
+
+    background:white;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+#dailyPhoto {
+
+
+    width:150px;
+
+
+    height:150px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+#dailyName {
+
+
+    font-size:28px;
+
+
+    margin:15px 0 5px;
+
+
+}
+
+
+
+#dailyRating {
+
+
+    font-size:22px;
+
+
+    font-weight:bold;
+
+
+}

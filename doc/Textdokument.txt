@@ -1,0 +1,5 @@
+Project ID: voxhywzllcjrdewuvacn
+
+Project URL: https://voxhywzllcjrdewuvacn.supabase.co
+
+Publishable key: sb_publishable_PQtk0jNL8lGjXazxl0eimw_fK_Y8XfY

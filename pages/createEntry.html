@@ -1,0 +1,249 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Neuer Eintrag</title>
+
+    <link rel="stylesheet"
+    href="../css/createEntry.css">
+
+</head>
+
+
+<body>
+
+
+<h1>Neuer Eintrag</h1>
+
+
+<form>
+
+<p id="progressText">
+
+Seite 1 von 4
+
+</p>
+
+
+<progress
+id="progressBar"
+value="25"
+max="100">
+
+</progress>
+
+
+
+<div
+class="formPage"
+id="page1">
+
+<h2>Wer bist du?</h2>
+
+
+<p>Name*</p>
+<input id="name" type="text" required>
+
+
+<p>Foto*</p>
+
+<input
+id="photo"
+type="file"
+accept="image/*"
+capture="user"
+required>
+
+
+<p>Geburtsdatum</p>
+<input id="birthday" type="date">
+
+
+<p>Beziehungsstatus</p>
+<input id="relationship" type="text">
+
+
+<p>Fun-Facts über dich</p>
+
+<textarea id="funFacts"></textarea>
+
+</div>
+
+
+
+<div
+class="formPage"
+id="page2">
+
+<h2>Die wirklich wichtigen Fragen</h2>
+
+
+<p>
+Das will ich einmal werden,
+wenn ich gross bin
+</p>
+
+<textarea id="dreamJob"></textarea>
+
+
+<p>
+Wenn du eine Kartoffel wärst,
+zu welcher Speise würdest du am
+liebsten verarbeitet werden?
+</p>
+
+<textarea id="potato"></textarea>
+
+
+<p>Grund des Aufenthaltes</p>
+
+<input id="stayReason" type="text">
+
+</div>
+
+
+
+<div
+class="formPage"
+id="page3">
+
+<h2>Du & die WG</h2>
+
+
+<p>
+WG-Legendenstatus
+</p>
+
+<p>
+Wird automatisch vergeben 😉
+</p>
+
+
+<p>Woher kennst du die WG?</p>
+
+<input id="knownFrom" type="text">
+
+
+<p>Lieblingsitem der WG?</p>
+
+<input id="favoriteItem" type="text">
+
+
+<p>
+Dieser Song muss unbedingt auf die
+WG-Playlist
+</p>
+
+<input id="song" type="text">
+
+</div>
+
+
+
+<div
+class="formPage"
+id="page4">
+
+<h2>Zum Schluss...</h2>
+
+
+<p>
+Nachricht an zukünftige Besucher
+</p>
+
+<textarea id="message"></textarea>
+
+
+<p>
+Mein letzter Gedanke bevor ich
+nach Hause gehe
+</p>
+
+<textarea id="lastThought"></textarea>
+
+
+<p>
+Bewertung des WG-Abends (1-10)
+</p>
+
+<input
+id="rating"
+type="number"
+min="1"
+max="10">
+
+<p>
+Noch ein letzter Klick und du bist
+<br>
+für immer Teil der WG-Geschichte.
+</p>
+
+</div>
+
+
+
+<br>
+<br>
+
+
+<div class="buttonContainer">
+
+
+<button
+id="backButton"
+type="button"
+onclick="previousPage()">
+
+← Zurück
+
+</button>
+
+
+
+<button
+id="nextButton"
+type="button"
+onclick="nextPage()">
+
+Weiter →
+
+</button>
+
+
+
+<button
+id="saveButton"
+type="button"
+onclick="saveEntry()">
+
+Eintrag abschliessen ✓
+
+</button>
+
+
+</div>
+
+
+</form>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+<script src="../js/helpers.js"></script>
+
+<script src="../js/createEntry.js"></script>
+
+
+</body>
+
+</html>
+```

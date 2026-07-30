@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WG Gästebuch</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>WG Gästebuch</h1>
+
+    <h3>Einmal eingetragen. Für immer Teil der WG.</h3>
+
+
+    <p id="visitorCount">
+Bereits 0 Besucher haben die WG verewigt.
+</p>
+
+
+    <button onclick="neuerEintrag()">
+    Neuen Eintrag erstellen
+    </button>
+
+    <br>
+    <br>
+
+    <button onclick="gaestebuch()">
+    Gästebuch ansehen
+    </button>
+
+
+    <hr>
+
+
+    <h2>
+Besucher des Tages
+</h2>
+
+
+<div id="visitorOfDay">
+
+
+<img
+id="dailyPhoto"
+width="150"
+>
+
+
+<h3 id="dailyName">
+-
+</h3>
+
+
+<p id="dailyMessage">
+-
+</p>
+
+
+<p id="dailyRating">
+-
+</p>
+
+
+<button onclick="openDailyVisitor()">
+Zum Eintrag
+</button>
+
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
