@@ -49,6 +49,19 @@ if(visitor.photo_url){
 
     photo.src = visitor.photo_url;
 
+    photo.onclick = function(){
+
+    document.getElementById(
+        "largeVisitorPhoto"
+    ).src = visitor.photo_url;
+
+
+    document.getElementById(
+        "imageOverlay"
+    ).style.display = "flex";
+
+};
+
 }
 else{
 
@@ -191,3 +204,11 @@ document.getElementById(
 "/10";
 
 }
+
+document.getElementById(
+    "imageOverlay"
+).onclick = function(){
+
+    this.style.display = "none";
+
+};

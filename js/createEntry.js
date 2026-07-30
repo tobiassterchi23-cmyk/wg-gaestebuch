@@ -279,6 +279,15 @@ function getVisitorData() {
 
 async function saveEntry() {
 
+    document.getElementById(
+    "saveButton"
+).disabled = true;
+
+
+document.getElementById(
+    "loadingMessage"
+).style.display = "block";
+
     console.log("1. saveEntry gestartet");
 
 
