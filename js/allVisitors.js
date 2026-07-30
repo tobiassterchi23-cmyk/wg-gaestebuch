@@ -2,7 +2,7 @@ console.log(
     "Alle Besucher geladen"
 );
 
-
+let allVisitors = [];
 
 async function loadVisitors(){
 
@@ -30,7 +30,7 @@ if(error){
 
 }
 
-
+allVisitors = data;
 
 const container =
 document.getElementById(
@@ -39,29 +39,51 @@ document.getElementById(
 
 
 
-data.forEach(
+displayVisitors(data);
+
+}
+
+
+loadVisitors();
+
+function displayVisitors(visitors){
+
+
+const container =
+
+document.getElementById(
+"visitorsContainer"
+);
+
+
+container.innerHTML = "";
+
+
+
+visitors.forEach(
 (visitor)=>{
 
 
 const card =
+
 document.createElement(
-    "div"
+"div"
 );
+
 
 card.className =
 "visitor-card";
+
 
 card.innerHTML = `
 
 
 <img
 
-class="visitorImage"
-
 src="${
 visitor.photo_url
 ||
-'../images/default-avatar.png'
+"../images/default-avatar.png"
 }"
 
 >
@@ -73,12 +95,6 @@ ${visitor.name}
 
 </h2>
 
-
-<p class="visitorNumber">
-
-#${visitor.visitor_number}
-
-</p>
 
 <p>
 
@@ -93,13 +109,9 @@ visitor.age + " Jahre"
 </p>
 
 
-
 <p>
 
-${
-visitor.legend_status || ""
-
-}
+Besucher #${visitor.visitor_number}
 
 </p>
 
@@ -124,7 +136,6 @@ JSON.stringify(visitor)
 );
 
 
-
 window.location.href =
 "visitorCard.html";
 
@@ -133,17 +144,54 @@ window.location.href =
 
 
 
-container.appendChild(card);
+container.appendChild(
+card
+);
 
+
+});
 
 
 }
+
+function filterVisitors(){
+
+
+const searchText =
+
+document.getElementById(
+"searchInput"
+).value.toLowerCase();
+
+
+
+const filteredVisitors =
+
+allVisitors.filter(
+(visitor)=>{
+
+
+return (
+
+visitor.name
+.toLowerCase()
+.includes(searchText)
+
+||
+
+String(
+visitor.visitor_number
+).includes(searchText)
 
 );
 
 
+});
+
+
+displayVisitors(
+filteredVisitors
+);
+
+
 }
-
-
-
-loadVisitors();
