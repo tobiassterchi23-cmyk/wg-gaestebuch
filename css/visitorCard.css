@@ -1,12 +1,12 @@
 body {
 
-    margin:0;
+    margin: 0;
 
-    padding:20px;
+    padding: 20px;
 
-    font-family:Arial,sans-serif;
+    font-family: Arial, sans-serif;
 
-    background:#f5f5f5;
+    background: #f5f5f5;
 
 }
 
@@ -15,26 +15,26 @@ body {
 .visitor-card {
 
 
-    max-width:600px;
+    max-width: 600px;
 
 
-    margin:auto;
+    margin: auto;
 
 
-    background:white;
+    background: white;
 
 
-    padding:30px;
+    padding: 30px;
 
 
-    border-radius:30px;
+    border-radius: 30px;
 
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
 
-    text-align:center;
+    text-align: center;
 
 }
 
@@ -44,19 +44,19 @@ body {
 #visitorPhoto {
 
 
-    width:220px;
+    width: 220px;
 
 
-    height:220px;
+    height: 220px;
 
 
-    object-fit:cover;
+    object-fit: cover;
 
 
-    border-radius:50%;
+    border-radius: 50%;
 
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 
 }
@@ -67,9 +67,9 @@ body {
 #visitorName {
 
 
-    font-size:40px;
+    font-size: 40px;
 
-    margin:10px;
+    margin: 10px;
 
 
 }
@@ -79,7 +79,7 @@ body {
 #visitorNumber {
 
 
-    color:#777;
+    color: #777;
 
 
 }
@@ -89,10 +89,10 @@ body {
 #visitorStatus {
 
 
-    font-size:22px;
+    font-size: 22px;
 
 
-    font-weight:bold;
+    font-weight: bold;
 
 
 }
@@ -103,7 +103,7 @@ body {
 #visitorBadge {
 
 
-    font-size:28px;
+    font-size: 28px;
 
 
 }
@@ -113,16 +113,16 @@ body {
 #visitorEasterEgg {
 
 
-    margin-top:20px;
+    margin-top: 20px;
 
 
-    padding:15px;
+    padding: 15px;
 
 
-    background:#fff3cd;
+    background: #fff3cd;
 
 
-    border-radius:15px;
+    border-radius: 15px;
 
 
 }
@@ -132,7 +132,7 @@ body {
 
 hr {
 
-    margin:30px 0;
+    margin: 30px 0;
 
 }
 
@@ -144,16 +144,16 @@ hr {
 .questions p {
 
 
-    text-align:left;
+    text-align: left;
 
 
-    padding:10px;
+    padding: 10px;
 
 
-    border-radius:10px;
+    border-radius: 10px;
 
 
-    background:#fafafa;
+    background: #fafafa;
 
 
 }
@@ -163,13 +163,13 @@ hr {
 .footer {
 
 
-    margin-top:30px;
+    margin-top: 30px;
 
 
-    font-style:italic;
+    font-style: italic;
 
 
-    color:#777;
+    color: #777;
 
 
 }
@@ -178,9 +178,9 @@ body {
 
     font-family: Arial, sans-serif;
 
-    background:#f5f5f5;
+    background: #f5f5f5;
 
-    padding:20px;
+    padding: 20px;
 
 }
 
@@ -189,23 +189,23 @@ body {
 .visitorCard {
 
 
-    max-width:500px;
+    max-width: 500px;
 
 
-    margin:auto;
+    margin: auto;
 
 
-    background:white;
+    background: white;
 
 
-    border-radius:30px;
+    border-radius: 30px;
 
 
-    padding:25px;
+    padding: 25px;
 
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
 
 }
@@ -214,7 +214,7 @@ body {
 
 .cardHeader {
 
-    text-align:center;
+    text-align: center;
 
 }
 
@@ -223,16 +223,16 @@ body {
 .profileImage {
 
 
-    width:180px;
+    width: 180px;
 
 
-    height:180px;
+    height: 180px;
 
 
-    object-fit:cover;
+    object-fit: cover;
 
 
-    border-radius:50%;
+    border-radius: 50%;
 
 
 }
@@ -241,7 +241,7 @@ body {
 
 #visitorName {
 
-    margin-bottom:5px;
+    margin-bottom: 5px;
 
 }
 
@@ -249,9 +249,9 @@ body {
 
 .badgeArea {
 
-    text-align:center;
+    text-align: center;
 
-    font-size:18px;
+    font-size: 18px;
 
 }
 
@@ -260,7 +260,7 @@ body {
 .infoBox {
 
 
-    margin-top:25px;
+    margin-top: 25px;
 
 
 }
@@ -270,10 +270,10 @@ body {
 .infoBox p {
 
 
-    border-bottom:1px solid #eee;
+    border-bottom: 1px solid #eee;
 
 
-    padding-bottom:10px;
+    padding-bottom: 10px;
 
 
 }
@@ -283,13 +283,13 @@ body {
 .footerMessage {
 
 
-    text-align:center;
+    text-align: center;
 
 
-    margin-top:30px;
+    margin-top: 30px;
 
 
-    font-style:italic;
+    font-style: italic;
 
 
 }
@@ -297,10 +297,10 @@ body {
 #visitorBadge {
 
 
-    font-size:20px;
+    font-size: 20px;
 
 
-    font-weight:bold;
+    font-weight: bold;
 
 
 }
@@ -309,26 +309,26 @@ body {
 #visitorEasterEgg {
 
 
-    margin-top:20px;
+    margin-top: 20px;
 
 
-    padding:15px;
+    padding: 15px;
 
 
-    background:#fff3cd;
+    background: #fff3cd;
 
 
-    border-radius:15px;
+    border-radius: 15px;
 
 
-    font-weight:bold;
+    font-weight: bold;
 
 
 }
 
 .profilePhoto {
 
-    cursor:pointer;
+    cursor: pointer;
 
 }
 
@@ -337,34 +337,34 @@ body {
 #imageOverlay {
 
 
-    display:none;
+    display: none;
 
 
-    position:fixed;
+    position: fixed;
 
 
-    top:0;
+    top: 0;
 
 
-    left:0;
+    left: 0;
 
 
-    width:100%;
+    width: 100%;
 
 
-    height:100%;
+    height: 100%;
 
 
-    background:rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 
 
-    justify-content:center;
+    justify-content: center;
 
 
-    align-items:center;
+    align-items: center;
 
 
-    z-index:1000;
+    z-index: 1000;
 
 
 }
@@ -374,13 +374,13 @@ body {
 #largeVisitorPhoto {
 
 
-    max-width:90%;
+    max-width: 90%;
 
 
-    max-height:90%;
+    max-height: 90%;
 
 
-    border-radius:20px;
+    border-radius: 20px;
 
 
 }
@@ -388,84 +388,84 @@ body {
 button {
 
 
-    background:white;
+    background: white;
 
 
-    border:none;
+    border: none;
 
 
-    padding:14px 25px;
+    padding: 14px 25px;
 
 
-    font-size:17px;
+    font-size: 17px;
 
 
-    border-radius:30px;
+    border-radius: 30px;
 
 
-    cursor:pointer;
-
-
-    box-shadow:
-
-    0 5px 15px rgba(0,0,0,0.15);
-
-
-    display:block;
-
-
-    margin:15px auto;
-
-
-}
-
-#welcomeBox{
-
-
-    background:white;
-
-
-    padding:20px;
-
-
-    margin-bottom:25px;
-
-
-    border-radius:20px;
-
-
-    text-align:center;
+    cursor: pointer;
 
 
     box-shadow:
 
-    0 5px 15px rgba(0,0,0,0.1);
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+
+    display: block;
+
+
+    margin: 15px auto;
+
+
+}
+
+#welcomeBox {
+
+
+    background: white;
+
+
+    padding: 20px;
+
+
+    margin-bottom: 25px;
+
+
+    border-radius: 20px;
+
+
+    text-align: center;
+
+
+    box-shadow:
+
+        0 5px 15px rgba(0, 0, 0, 0.1);
 
 
 }
 
 
 
-#welcomeTitle{
+#welcomeTitle {
 
 
-    margin-top:0;
+    margin-top: 0;
 
 
-    margin-bottom:15px;
+    margin-bottom: 15px;
 
 
 }
 
 
 
-#welcomeText{
+#welcomeText {
 
 
-    margin-bottom:0;
+    margin-bottom: 0;
 
 
-    line-height:1.6;
+    line-height: 1.6;
 
 
 }

@@ -1,14 +1,14 @@
-async function getRandomVisitor(){
+async function getRandomVisitor() {
 
 
-    const {data,error} = await supabaseClient
+    const { data, error } = await supabaseClient
 
-    .from("visitors")
+        .from("visitors")
 
-    .select("*");
+        .select("*");
 
 
-    if(error){
+    if (error) {
 
         console.error(error);
 
@@ -17,7 +17,7 @@ async function getRandomVisitor(){
     }
 
 
-    if(data.length === 0){
+    if (data.length === 0) {
 
         return;
 
@@ -44,7 +44,7 @@ async function getRandomVisitor(){
 
 
     window.location.href =
-    "visitorCard.html";
+        "visitorCard.html";
 
 
 }

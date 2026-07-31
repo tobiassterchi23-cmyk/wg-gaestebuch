@@ -4,10 +4,10 @@ body {
     font-family: Arial, sans-serif;
 
 
-    background:#f5f5f5;
+    background: #f5f5f5;
 
 
-    padding:20px;
+    padding: 20px;
 
 
 }
@@ -17,7 +17,7 @@ body {
 h1 {
 
 
-    text-align:center;
+    text-align: center;
 
 
 }
@@ -27,22 +27,22 @@ h1 {
 .visitorGrid {
 
 
-    display:grid;
+    display: grid;
 
 
     grid-template-columns:
 
 
-    repeat(2,1fr);
+        repeat(2, 1fr);
 
 
-    gap:20px;
+    gap: 20px;
 
 
-    max-width:600px;
+    max-width: 600px;
 
 
-    margin:auto;
+    margin: auto;
 
 
 }
@@ -52,21 +52,21 @@ h1 {
 .visitor-card {
 
 
-    background:white;
+    background: white;
 
 
-    border-radius:25px;
+    border-radius: 25px;
 
 
-    padding:10px;
+    padding: 10px;
 
 
-    text-align:center;
+    text-align: center;
 
 
     box-shadow:
 
-    0 8px 20px rgba(0,0,0,0.12);
+        0 8px 20px rgba(0, 0, 0, 0.12);
 
 
 }
@@ -76,16 +76,16 @@ h1 {
 .visitorImage {
 
 
-    width:90px;
+    width: 90px;
 
 
-    height:90px;
+    height: 90px;
 
 
-    object-fit:cover;
+    object-fit: cover;
 
 
-    border-radius:50%;
+    border-radius: 50%;
 
 
 }
@@ -95,121 +95,121 @@ h1 {
 .visitorGrid h2 {
 
 
-    margin-bottom:5px;
+    margin-bottom: 5px;
 
 
 }
 
 .visitorNumber {
 
-    font-weight:bold;
+    font-weight: bold;
 
 }
 
 
 .visitor-card p {
 
-    margin:6px 0;
+    margin: 6px 0;
 
-    font-size:15px;
+    font-size: 15px;
 
 }
 
-#searchInput{
+#searchInput {
 
 
-display:block;
+    display: block;
 
 
-width:80%;
+    width: 80%;
 
-max-width:400px;
-
-
-margin:20px auto 40px auto;
+    max-width: 400px;
 
 
-padding:12px 18px;
+    margin: 20px auto 40px auto;
 
 
-font-size:18px;
+    padding: 12px 18px;
 
 
-border-radius:25px;
+    font-size: 18px;
 
 
-border:1px solid #ccc;
+    border-radius: 25px;
 
 
-box-sizing:border-box;
+    border: 1px solid #ccc;
+
+
+    box-sizing: border-box;
 
 
 }
 
 .visitor-card h2 {
 
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
 
 
-.visitorGrid{
+    .visitorGrid {
 
 
-    grid-template-columns:
+        grid-template-columns:
 
-    repeat(2,1fr);
-
-
-    gap:12px;
+            repeat(2, 1fr);
 
 
-}
+        gap: 12px;
 
 
-
-.visitor-card{
-
-
-    padding:10px;
-
-
-}
+    }
 
 
 
-.visitorImage{
+    .visitor-card {
 
 
-    width:75px;
+        padding: 10px;
 
 
-    height:75px;
-
-
-}
+    }
 
 
 
-.visitor-card h2{
+    .visitorImage {
 
 
-    font-size:18px;
+        width: 75px;
 
 
-}
+        height: 75px;
+
+
+    }
 
 
 
-.visitor-card p{
+    .visitor-card h2 {
 
 
-    font-size:13px;
+        font-size: 18px;
 
 
-}
+    }
+
+
+
+    .visitor-card p {
+
+
+        font-size: 13px;
+
+
+    }
 
 
 }

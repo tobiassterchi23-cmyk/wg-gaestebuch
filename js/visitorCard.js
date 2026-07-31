@@ -4,312 +4,312 @@ const savedVisitor = localStorage.getItem(
 
 
 
-if(!savedVisitor){
+if (!savedVisitor) {
 
     console.error(
         "Kein Besucher gefunden"
     );
 
 }
-else{
+else {
 
 
-const visitor = JSON.parse(
-    savedVisitor
-);
+    const visitor = JSON.parse(
+        savedVisitor
+    );
 
-const welcomeMessages = [
+    const welcomeMessages = [
 
-"Willkommen im Gästebuch!",
+        "Willkommen im Gästebuch!",
 
-"Schön, dass du da warst!",
+        "Schön, dass du da warst!",
 
-"Ein weiterer Abend.\nEine weitere Geschichte."
+        "Ein weiterer Abend.\nEine weitere Geschichte."
 
-];
-
-
-const randomMessage =
-
-welcomeMessages[
-
-Math.floor(
-Math.random()
-*
-welcomeMessages.length
-)
-
-];
+    ];
 
 
-// Standardnachricht setzen
+    const randomMessage =
 
-document.getElementById(
-"welcomeTitle"
-).textContent =
+        welcomeMessages[
 
-randomMessage;
+        Math.floor(
+            Math.random()
+            *
+            welcomeMessages.length
+        )
+
+        ];
 
 
-
-// Easter Eggs überschreiben die Standardnachricht
-
-if(visitor.has_crown){
+    // Standardnachricht setzen
 
     document.getElementById(
-    "welcomeTitle"
+        "welcomeTitle"
     ).textContent =
 
-    "👑 LEGENDÄR!";
-
-}
+        randomMessage;
 
 
-else if(
-visitor.visitor_number === 69
-){
 
-    document.getElementById(
-    "welcomeTitle"
-    ).textContent =
+    // Easter Eggs überschreiben die Standardnachricht
 
-    "😏 Nice.";
+    if (visitor.has_crown) {
 
-}
+        document.getElementById(
+            "welcomeTitle"
+        ).textContent =
 
-
-else if(
-visitor.visitor_number === 67
-){
-
-    document.getElementById(
-    "welcomeTitle"
-    ).textContent =
-
-    "⭐ Legendärer Besuch!";
-
-}
-
-
-else if(
-visitor.visitor_number % 10 === 0
-){
-
-    document.getElementById(
-    "welcomeTitle"
-    ).textContent =
-
-    "🎉 Runder Besuch!";
-
-}
-
-
-// Besuchertext anzeigen
-
-document.getElementById(
-"welcomeText"
-).innerHTML =
-
-"Du bist Besucher #"
-
-+
-
-visitor.visitor_number
-
-+
-
-" der<br>Wankdorf-WG.";
-
-function getStatus(visitor){
-
-
-    if(visitor.has_crown){
-
-        return "👑 WG-Legende";
+            "👑 LEGENDÄR!";
 
     }
 
 
-    if(visitor.legend_status){
+    else if (
+        visitor.visitor_number === 69
+    ) {
 
-        return visitor.legend_status;
+        document.getElementById(
+            "welcomeTitle"
+        ).textContent =
+
+            "😏 Nice.";
 
     }
 
 
-    return "WG-Neuling";
+    else if (
+        visitor.visitor_number === 67
+    ) {
 
-}
+        document.getElementById(
+            "welcomeTitle"
+        ).textContent =
+
+            "⭐ Legendärer Besuch!";
+
+    }
 
 
+    else if (
+        visitor.visitor_number % 10 === 0
+    ) {
 
-const photo = document.getElementById(
-    "visitorPhoto"
-);
+        document.getElementById(
+            "welcomeTitle"
+        ).textContent =
 
-if(visitor.photo_url){
+            "🎉 Runder Besuch!";
 
-    photo.src = visitor.photo_url;
+    }
 
-    photo.onclick = function(){
+
+    // Besuchertext anzeigen
 
     document.getElementById(
-        "largeVisitorPhoto"
-    ).src = visitor.photo_url;
+        "welcomeText"
+    ).innerHTML =
+
+        "Du bist Besucher #"
+
+        +
+
+        visitor.visitor_number
+
+        +
+
+        " der<br>Wankdorf-WG.";
+
+    function getStatus(visitor) {
 
 
-    document.getElementById(
-        "imageOverlay"
-    ).style.display = "flex";
+        if (visitor.has_crown) {
 
-};
+            return "👑 WG-Legende";
 
-}
-else{
+        }
 
-    photo.src = "../images/default-avatar.png";
 
-}
+        if (visitor.legend_status) {
+
+            return visitor.legend_status;
+
+        }
+
+
+        return "WG-Neuling";
+
+    }
+
+
+
+    const photo = document.getElementById(
+        "visitorPhoto"
+    );
+
+    if (visitor.photo_url) {
+
+        photo.src = visitor.photo_url;
+
+        photo.onclick = function () {
+
+            document.getElementById(
+                "largeVisitorPhoto"
+            ).src = visitor.photo_url;
+
+
+            document.getElementById(
+                "imageOverlay"
+            ).style.display = "flex";
+
+        };
+
+    }
+    else {
+
+        photo.src = "../images/default-avatar.png";
+
+    }
 
     document.getElementById(
         "visitorName"
     ).textContent =
-    visitor.name;
+        visitor.name;
 
 
     document.getElementById(
         "visitorNumber"
     ).textContent =
-    "#" + visitor.visitor_number;
+        "#" + visitor.visitor_number;
 
 
     document.getElementById(
         "visitorAge"
     ).textContent =
-    visitor.age
-    ?
-    visitor.age + " Jahre"
-    :
-    "Alter unbekannt";
+        visitor.age
+            ?
+            visitor.age + " Jahre"
+            :
+            "Alter unbekannt";
 
 
     document.getElementById(
-    "visitorStatus"
+        "visitorStatus"
     ).textContent =
-    "Status: " + getStatus(visitor);
+        "Status: " + getStatus(visitor);
 
-    if(visitor.has_crown){
+    if (visitor.has_crown) {
+
+
+        document.getElementById(
+            "visitorBadge"
+        ).textContent =
+            "👑 Legendärer Besucher";
+
+
+    }
+
+    if (visitor.easter_egg) {
+
+
+        document.getElementById(
+            "visitorEasterEgg"
+        ).textContent =
+            visitor.easter_egg;
+
+
+    }
+
+    document.getElementById(
+        "visitDate"
+    ).textContent =
+        new Date(visitor.visit_date)
+            .toLocaleDateString(
+                "de-CH"
+            );
+
+    document.getElementById(
+        "relationship"
+    ).textContent =
+        "Beziehungsstatus: " +
+        (visitor.relationship_status || "-");
 
 
     document.getElementById(
-        "visitorBadge"
+        "funFacts"
     ).textContent =
-    "👑 Legendärer Besucher";
-
-
-}
-
-    if(visitor.easter_egg){
+        "Fun-Facts: " +
+        (visitor.fun_facts || "-");
 
 
     document.getElementById(
-        "visitorEasterEgg"
+        "dreamJob"
     ).textContent =
-    visitor.easter_egg;
+        "Das will ich einmal werden: " +
+        (visitor.dream_job || "-");
 
-
-}
 
     document.getElementById(
-    "visitDate"
+        "potato"
     ).textContent =
-    new Date(visitor.visit_date)
-    .toLocaleDateString(
-    "de-CH"
-    );
+        "Kartoffelfrage: " +
+        (visitor.potato_answer || "-");
+
 
     document.getElementById(
-    "relationship"
+        "stayReason"
     ).textContent =
-    "Beziehungsstatus: " +
-    (visitor.relationship_status || "-");
+        "Grund des Aufenthalts: " +
+        (visitor.stay_reason || "-");
 
 
-document.getElementById(
-    "funFacts"
-).textContent =
-"Fun-Facts: " +
-(visitor.fun_facts || "-");
+    document.getElementById(
+        "knownFrom"
+    ).textContent =
+        "Woher kenne ich die WG: " +
+        (visitor.known_from || "-");
 
 
-document.getElementById(
-    "dreamJob"
-).textContent =
-"Das will ich einmal werden: " +
-(visitor.dream_job || "-");
+    document.getElementById(
+        "favoriteItem"
+    ).textContent =
+        "Lieblingsitem der WG: " +
+        (visitor.favorite_item || "-");
 
 
-document.getElementById(
-    "potato"
-).textContent =
-"Kartoffelfrage: " +
-(visitor.potato_answer || "-");
+    document.getElementById(
+        "song"
+    ).textContent =
+        "WG-Playlist: " +
+        (visitor.playlist_song || "-");
 
 
-document.getElementById(
-    "stayReason"
-).textContent =
-"Grund des Aufenthalts: " +
-(visitor.stay_reason || "-");
+    document.getElementById(
+        "message"
+    ).textContent =
+        "Nachricht an zukünftige Besucher: " +
+        (visitor.future_message || "-");
 
 
-document.getElementById(
-    "knownFrom"
-).textContent =
-"Woher kenne ich die WG: " +
-(visitor.known_from || "-");
+    document.getElementById(
+        "lastThought"
+    ).textContent =
+        "Mein letzter Gedanke: " +
+        (visitor.last_thought || "-");
 
 
-document.getElementById(
-    "favoriteItem"
-).textContent =
-"Lieblingsitem der WG: " +
-(visitor.favorite_item || "-");
-
-
-document.getElementById(
-    "song"
-).textContent =
-"WG-Playlist: " +
-(visitor.playlist_song || "-");
-
-
-document.getElementById(
-    "message"
-).textContent =
-"Nachricht an zukünftige Besucher: " +
-(visitor.future_message || "-");
-
-
-document.getElementById(
-    "lastThought"
-).textContent =
-"Mein letzter Gedanke: " +
-(visitor.last_thought || "-");
-
-
-document.getElementById(
-    "rating"
-).textContent =
-"Bewertung des WG-Abends: " +
-(visitor.rating || "-") +
-"/10";
+    document.getElementById(
+        "rating"
+    ).textContent =
+        "Bewertung des WG-Abends: " +
+        (visitor.rating || "-") +
+        "/10";
 
 }
 
 document.getElementById(
     "imageOverlay"
-).onclick = function(){
+).onclick = function () {
 
     this.style.display = "none";
 

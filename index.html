@@ -15,156 +15,159 @@
 <body>
 
     <h1>
-WG Gästebuch
-</h1>
+        WG Gästebuch
+    </h1>
 
     <h2>
-Herzlich Willkommen in der Wankdorf-WG!
-</h2>
+        Herzlich Willkommen in der Wankdorf-WG!
+    </h2>
 
 
-<h3>
+    <h3>
 
-Wir wünschen dir einen angenehmen Aufenthalt. Bei Fragen und Anmerkungen lassen Sie sich von
-einer Fachperson beraten und lesen Sie die Packungsbeilage.
+        Wir wünschen dir einen angenehmen Aufenthalt. Bei Fragen und Anmerkungen lassen Sie sich von
+        einer Fachperson beraten und lesen Sie die Packungsbeilage.
 
-</h3>
-
-
-
-  <p id="visitorCount">
-
-Lade Besucherzahl ...
-
-</p>
-
-<div id="ratingBox">
-
-<h2>
-⭐ WG-Rating
-</h2>
-
-<p id="starRating">
-
-★★★★★
-
-</p>
-
-<p id="ratingValue">
-
-0 / 10
-
-</p>
+    </h3>
 
 
 
-</div>
+    <p id="visitorCount">
+
+        Lade Besucherzahl ...
+
+    </p>
+
+    <div id="ratingBox">
+
+        <h2>
+            ⭐ WG-Rating
+        </h2>
+
+        <p id="starRating">
+
+            ★★★★★
+
+        </p>
+
+        <p id="ratingValue">
+
+            0 / 10
+
+        </p>
+
+
+
+    </div>
 
     <button onclick="neuerEintrag()">
-    ✍️ Im Gästebuch verewigen
+        ✍️ Im Gästebuch verewigen
     </button>
 
     <br>
     <br>
 
     <button onclick="gaestebuch()">
-    📖 Gästebuch ansehen
+        📖 Gästebuch ansehen
     </button>
-<br>
-<br>
+    <br>
+    <br>
 
-<button onclick="randomVisitor()">
+    <button onclick="randomVisitor()">
 
-🎲
-Zufälliger Besucher
-
-</button>
-
-
-<div id="randomOverlay">
-
-
-    <div class="randomBox">
-
-
-        <div class="randomIcon">
-
-            🎲
-
-        </div>
-
-
-        <h2>
+        🎲
         Zufälliger Besucher
-        </h2>
+
+    </button>
 
 
-        <p id="randomText">
-        Suche den nächsten Besucher...
-        </p>
+    <div id="randomOverlay">
 
 
-        <h1 id="randomName">
-        -
-        </h1>
+        <div class="randomBox">
 
 
-        <div class="randomLoading">
+            <div class="randomIcon">
 
-            ✨ ✨ ✨
+                🎲
+
+            </div>
+
+
+            <h2>
+                Zufälliger Besucher
+            </h2>
+
+
+            <p id="randomText">
+                Suche den nächsten Besucher...
+            </p>
+
+
+            <h1 id="randomName">
+                -
+            </h1>
+
+
+            <div class="randomLoading">
+
+                ✨ ✨ ✨
+
+            </div>
+
 
         </div>
 
 
     </div>
-
-
-</div>
     <hr>
 
 
     <h2>
-⭐ Person des Tages ⭐
-</h2>
+        ⭐ Person des Tages ⭐
+    </h2>
 
 
-<div id="visitorOfDay">
+    <div id="visitorOfDay">
 
 
-<img
-id="dailyPhoto"
-width="150"
->
+        <img id="dailyPhoto" width="150">
 
 
-<h3 id="dailyName">
--
-</h3>
+        <h3 id="dailyName">
+            -
+        </h3>
 
 
-<p id="dailyMessage">
--
-</p>
+        <p id="dailyMessage">
+            -
+        </p>
 
 
-<p id="dailyRating">
--
-</p>
+        <p id="dailyRating">
+            -
+        </p>
 
 
-<button onclick="openDailyVisitor()">
-Zum Eintrag
-</button>
+        <button onclick="openDailyVisitor()">
+            Zum Eintrag
+        </button>
 
 
 
-</div>
+    </div>
 
-<div class="cookieNotice">
+    <div class="cookieNotice">
 
-Achtung, diese Website verwendet Cookies. Diese dienen ausschliesslich dazu, den Entwickler bei Laune zu halten. Bevorzugt werden M-Budget Schokoladencookies. Mit der Nutzung dieser Website erklärst du dich zudem einverstanden, dass wir bei Serverproblemen Gölä konsultieren dürfen. Deine Daten werden streng vertraulich behandelt. Ausser wir haben dich nicht gern, dann verkaufen wir sie direkt nach China. Und an deine Mutter. Im Falle von Beschwerden, wenden Sie sich bitte direkt an den Bundesrat oder Ihre lokale Dorfkäserei. Dort werden sie innerhalb von drei Tagen ignoriert oder an den Praktikanten weitergeleitet. Diese Website kann Spuren von Nüssen enthalten.
+        Achtung, diese Website verwendet Cookies. Diese dienen ausschliesslich dazu, den Entwickler bei Laune zu halten.
+        Bevorzugt werden M-Budget Schokoladencookies. Mit der Nutzung dieser Website erklärst du dich zudem
+        einverstanden, dass wir bei Serverproblemen Gölä konsultieren dürfen. Deine Daten werden streng vertraulich
+        behandelt. Ausser wir haben dich nicht gern, dann verkaufen wir sie direkt nach China. Und an deine Mutter. Im
+        Falle von Beschwerden, wenden Sie sich bitte direkt an den Bundesrat oder Ihre lokale Dorfkäserei. Dort werden
+        sie innerhalb von drei Tagen ignoriert oder an den Praktikanten weitergeleitet. Diese Website kann Spuren von
+        Nüssen enthalten.
 
-</div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 

@@ -1,60 +1,60 @@
-async function compressImage(file){
+async function compressImage(file) {
 
 
-    return new Promise((resolve)=>{
+    return new Promise((resolve) => {
 
 
         const image = new Image();
 
 
-        image.onload = function(){
+        image.onload = function () {
 
 
             const canvas =
-            document.createElement(
-                "canvas"
-            );
+                document.createElement(
+                    "canvas"
+                );
 
 
             const maxSize = 800;
 
 
             let width =
-            image.width;
+                image.width;
 
 
             let height =
-            image.height;
+                image.height;
 
 
 
-            if(width > height){
+            if (width > height) {
 
-                if(width > maxSize){
+                if (width > maxSize) {
 
                     height =
-                    height *
-                    maxSize /
-                    width;
+                        height *
+                        maxSize /
+                        width;
 
                     width =
-                    maxSize;
+                        maxSize;
 
                 }
 
             }
 
-            else{
+            else {
 
-                if(height > maxSize){
+                if (height > maxSize) {
 
                     width =
-                    width *
-                    maxSize /
-                    height;
+                        width *
+                        maxSize /
+                        height;
 
                     height =
-                    maxSize;
+                        maxSize;
 
                 }
 
@@ -62,15 +62,15 @@ async function compressImage(file){
 
 
             canvas.width =
-            width;
+                width;
 
 
             canvas.height =
-            height;
+                height;
 
 
             const context =
-            canvas.getContext("2d");
+                canvas.getContext("2d");
 
 
             context.drawImage(
@@ -90,7 +90,7 @@ async function compressImage(file){
 
             canvas.toBlob(
 
-                function(blob){
+                function (blob) {
 
                     resolve(blob);
 
@@ -236,10 +236,10 @@ function createVisitor(data, visitorNumber) {
 
 
         legend_status:
-        calculateLegendStatus(
-        visitorNumber,
-        new Date()
-        ),
+            calculateLegendStatus(
+                visitorNumber,
+                new Date()
+            ),
 
 
         fun_facts:
@@ -294,15 +294,15 @@ function createVisitor(data, visitorNumber) {
         // werden später automatisch gesetzt
 
         is_legend:
-        checkEasterEgg(visitorNumber)?.legend || false,
+            checkEasterEgg(visitorNumber)?.legend || false,
 
 
         has_crown:
-        checkEasterEgg(visitorNumber)?.legend || false,
+            checkEasterEgg(visitorNumber)?.legend || false,
 
 
         easter_egg:
-        checkEasterEgg(visitorNumber)?.text || null,
+            checkEasterEgg(visitorNumber)?.text || null,
 
 
         // wird später nach Foto-Upload gefüllt
@@ -333,7 +333,7 @@ async function saveVisitor(visitor) {
 
 
 
-    if(error){
+    if (error) {
 
         console.error(
             "Fehler beim Speichern:",
@@ -346,7 +346,7 @@ async function saveVisitor(visitor) {
 
 
 
-    if(!data || data.length === 0){
+    if (!data || data.length === 0) {
 
         console.error(
             "Keine Daten zurückgegeben"
@@ -368,7 +368,7 @@ async function saveVisitor(visitor) {
 
 }
 
-async function uploadPhoto(file){
+async function uploadPhoto(file) {
 
 
     console.log(
@@ -376,7 +376,7 @@ async function uploadPhoto(file){
     );
 
 
-    if(!file){
+    if (!file) {
 
         console.log(
             "KEIN FOTO GEFUNDEN!"
@@ -403,9 +403,9 @@ async function uploadPhoto(file){
 
         + file.name;
 
-        const compressedImage =
+    const compressedImage =
 
-await compressImage(file);
+        await compressImage(file);
 
 
     console.log(
@@ -418,22 +418,22 @@ await compressImage(file);
 
 
 
-    const {error} =
+    const { error } =
 
-    await supabaseClient.storage
+        await supabaseClient.storage
 
-    .from("visitor-images")
+            .from("visitor-images")
 
-    .upload(
+            .upload(
 
-    fileName,
+                fileName,
 
-    compressedImage
+                compressedImage
 
-);
+            );
 
 
-    if(error){
+    if (error) {
 
         console.error(
             "FEHLER BEIM FOTO-UPLOAD:"
@@ -454,17 +454,17 @@ await compressImage(file);
 
 
 
-    const {data} =
+    const { data } =
 
-    supabaseClient.storage
+        supabaseClient.storage
 
-    .from("visitor-images")
+            .from("visitor-images")
 
-    .getPublicUrl(
+            .getPublicUrl(
 
-        fileName
+                fileName
 
-    );
+            );
 
 
     console.log(
@@ -480,44 +480,44 @@ await compressImage(file);
 
 }
 
-function calculateLegendStatus(visitorNumber, createdAt){
+function calculateLegendStatus(visitorNumber, createdAt) {
 
 
     let status =
-    "WG-Neuling";
+        "WG-Neuling";
 
 
-    if(createdAt){
+    if (createdAt) {
 
 
         const today =
-        new Date();
+            new Date();
 
 
         const visitDate =
-        new Date(createdAt);
+            new Date(createdAt);
 
 
         const difference =
-        today - visitDate;
+            today - visitDate;
 
 
         const years =
-        difference /
-        (1000 * 60 * 60 * 24 * 365);
+            difference /
+            (1000 * 60 * 60 * 24 * 365);
 
 
 
-        if(years >= 1.5){
+        if (years >= 1.5) {
             status =
-            "WG-Urgestein";
+                "WG-Urgestein";
 
         }
 
-        else if(years >= 0.5){
+        else if (years >= 0.5) {
 
             status =
-            "Stammgast";
+                "Stammgast";
 
         }
 
@@ -530,17 +530,17 @@ function calculateLegendStatus(visitorNumber, createdAt){
 
 }
 
-function checkEasterEgg(visitorNumber){
+function checkEasterEgg(visitorNumber) {
 
 
-    if(visitorNumber === 200){
+    if (visitorNumber === 200) {
 
         return {
 
             text:
-            "Herzlichen Glückwunsch! Du bist Besucher Nr. 200 und erhältst den legendären WG-Status.",
+                "Herzlichen Glückwunsch! Du bist Besucher Nr. 200 und erhältst den legendären WG-Status.",
 
-            legend:true
+            legend: true
 
         };
 
@@ -548,14 +548,14 @@ function checkEasterEgg(visitorNumber){
 
 
 
-    if(visitorNumber === 69){
+    if (visitorNumber === 69) {
 
         return {
 
             text:
-            "Glückwunsch! Du bist Besucher Nr. 69! 😏😏",
+                "Glückwunsch! Du bist Besucher Nr. 69! 😏😏",
 
-            legend:false
+            legend: false
 
         };
 
@@ -563,14 +563,14 @@ function checkEasterEgg(visitorNumber){
 
 
 
-    if(visitorNumber === 67){
+    if (visitorNumber === 67) {
 
         return {
 
             text:
-            "Glückwunsch! Du bist Besucher Nr. 67! 🫲🫱",
+                "Glückwunsch! Du bist Besucher Nr. 67! 🫲🫱",
 
-            legend:false
+            legend: false
 
         };
 
@@ -578,17 +578,17 @@ function checkEasterEgg(visitorNumber){
 
 
 
-    if(visitorNumber % 10 === 0){
+    if (visitorNumber % 10 === 0) {
 
 
         return {
 
             text:
-            "🎉 Glückwunsch! Du bist Besucher Nr. "
-            + visitorNumber
-            + "!",
+                "🎉 Glückwunsch! Du bist Besucher Nr. "
+                + visitorNumber
+                + "!",
 
-            legend:false
+            legend: false
 
         };
 

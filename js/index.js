@@ -1,16 +1,16 @@
-function goToEntry(){
+function goToEntry() {
 
     window.location.href =
-    "createEntry.html";
+        "createEntry.html";
 
 }
 
 
 
-function goToVisitors(){
+function goToVisitors() {
 
     window.location.href =
-    "allVisitors.html";
+        "allVisitors.html";
 
 }
 
@@ -18,61 +18,61 @@ function goToVisitors(){
 
 
 
-async function randomVisitor(){
+async function randomVisitor() {
 
 
-const {data,error} =
-await supabaseClient
+    const { data, error } =
+        await supabaseClient
 
-.from("visitors")
+            .from("visitors")
 
-.select("*");
-
-
-
-if(error){
-
-    console.error(error);
-
-    return;
-
-}
+            .select("*");
 
 
 
-if(data.length === 0){
+    if (error) {
 
-    alert(
-        "Noch keine Besucher vorhanden."
+        console.error(error);
+
+        return;
+
+    }
+
+
+
+    if (data.length === 0) {
+
+        alert(
+            "Noch keine Besucher vorhanden."
+        );
+
+        return;
+
+    }
+
+
+
+    const random =
+        data[
+        Math.floor(
+            Math.random() * data.length
+        )
+        ];
+
+
+
+    localStorage.setItem(
+
+        "currentVisitor",
+
+        JSON.stringify(random)
+
     );
 
-    return;
-
-}
 
 
-
-const random =
-data[
-Math.floor(
-Math.random()*data.length
-)
-];
-
-
-
-localStorage.setItem(
-
-"currentVisitor",
-
-JSON.stringify(random)
-
-);
-
-
-
-window.location.href =
-"visitorCard.html";
+    window.location.href =
+        "visitorCard.html";
 
 
 }

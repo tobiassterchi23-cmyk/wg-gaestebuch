@@ -4,89 +4,88 @@ console.log(
 
 let allVisitors = [];
 
-async function loadVisitors(){
+async function loadVisitors() {
 
 
-const {data,error} = await supabaseClient
+    const { data, error } = await supabaseClient
 
-.from("visitors")
+        .from("visitors")
 
-.select("*")
+        .select("*")
 
-.order(
-    "visitor_number",
-    {
-        ascending:false
+        .order(
+            "visitor_number",
+            {
+                ascending: false
+            }
+        );
+
+
+
+    if (error) {
+
+        console.error(error);
+
+        return;
+
     }
-);
+
+    allVisitors = data;
+
+    const container =
+        document.getElementById(
+            "visitorsContainer"
+        );
 
 
 
-if(error){
-
-    console.error(error);
-
-    return;
-
-}
-
-allVisitors = data;
-
-const container =
-document.getElementById(
-    "visitorsContainer"
-);
-
-
-
-displayVisitors(data);
+    displayVisitors(data);
 
 }
 
 
 loadVisitors();
 
-function displayVisitors(visitors){
+function displayVisitors(visitors) {
 
 
-const container =
+    const container =
 
-document.getElementById(
-"visitorsContainer"
-);
-
-
-container.innerHTML = "";
+        document.getElementById(
+            "visitorsContainer"
+        );
 
 
-
-visitors.forEach(
-(visitor)=>{
+    container.innerHTML = "";
 
 
-const card =
 
-document.createElement(
-"div"
-);
+    visitors.forEach(
+        (visitor) => {
 
 
-card.className =
-"visitor-card";
+            const card =
+
+                document.createElement(
+                    "div"
+                );
 
 
-card.innerHTML = `
+            card.className =
+                "visitor-card";
+
+
+            card.innerHTML = `
 
 
 <img
 
 class="visitorImage"
 
-src="${
-visitor.photo_url
-||
-"../images/default-avatar.png"
-}"
+src="${visitor.photo_url
+                ||
+                "../images/default-avatar.png"
+                }"
 
 >
 
@@ -100,13 +99,12 @@ ${visitor.name}
 
 <p>
 
-${
-visitor.age
-?
-visitor.age + " Jahre"
-:
-"Alter unbekannt"
-}
+${visitor.age
+                    ?
+                    visitor.age + " Jahre"
+                    :
+                    "Alter unbekannt"
+                }
 
 </p>
 
@@ -127,25 +125,23 @@ ${visitor.legend_status || ""}
 
 <p>
 
-${
-visitor.visit_date
-?
-new Date(visitor.visit_date)
-.toLocaleDateString("de-CH")
-:
-""
-}
+${visitor.visit_date
+                    ?
+                    new Date(visitor.visit_date)
+                        .toLocaleDateString("de-CH")
+                    :
+                    ""
+                }
 
 </p>
 
 
-${
-visitor.easter_egg
-?
-"<p>⭐ " + visitor.easter_egg + "</p>"
-:
-""
-}
+${visitor.easter_egg
+                    ?
+                    "<p>⭐ " + visitor.easter_egg + "</p>"
+                    :
+                    ""
+                }
 
 ;
 
@@ -153,94 +149,94 @@ visitor.easter_egg
 
 
 
-card.style.cursor =
-"pointer";
+            card.style.cursor =
+                "pointer";
 
 
 
-card.onclick = function(){
+            card.onclick = function () {
 
 
-localStorage.setItem(
+                localStorage.setItem(
 
-"currentVisitor",
+                    "currentVisitor",
 
-JSON.stringify(visitor)
+                    JSON.stringify(visitor)
 
-);
-
-
-window.location.href =
-"visitorCard.html";
+                );
 
 
-};
+                window.location.href =
+                    "visitorCard.html";
+
+
+            };
 
 
 
-container.appendChild(
-card
-);
+            container.appendChild(
+                card
+            );
 
 
-});
+        });
 
 
 }
 
-function filterVisitors(){
+function filterVisitors() {
 
 
-const searchText =
+    const searchText =
 
-document.getElementById(
-"searchInput"
-)
-.value
-.toLowerCase()
-.trim();
-
-
-
-const filteredVisitors =
-
-allVisitors.filter(
-(visitor)=>{
+        document.getElementById(
+            "searchInput"
+        )
+            .value
+            .toLowerCase()
+            .trim();
 
 
-return (
 
-visitor.name
-.toLowerCase()
-.includes(searchText)
+    const filteredVisitors =
 
-
-||
+        allVisitors.filter(
+            (visitor) => {
 
 
-String(
-visitor.visitor_number
-)
-.includes(searchText)
+                return (
+
+                    visitor.name
+                        .toLowerCase()
+                        .includes(searchText)
 
 
-||
+                    ||
 
 
-(visitor.legend_status || "")
-.toLowerCase()
-.includes(searchText)
+                    String(
+                        visitor.visitor_number
+                    )
+                        .includes(searchText)
 
 
-);
+                    ||
 
 
-});
+                    (visitor.legend_status || "")
+                        .toLowerCase()
+                        .includes(searchText)
 
 
-displayVisitors(
-filteredVisitors
-);
+                );
+
+
+            });
+
+
+    displayVisitors(
+        filteredVisitors
+    );
 
 
 }

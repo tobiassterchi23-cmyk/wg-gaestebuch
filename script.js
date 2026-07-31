@@ -42,27 +42,27 @@ async function loadHomePage() {
 
     // Besucheranzahl anzeigen
 
-if(data.length === 1){
+    if (data.length === 1) {
 
-    document.getElementById(
-        "visitorCount"
-    ).textContent =
+        document.getElementById(
+            "visitorCount"
+        ).textContent =
 
-    "👥 Bereits 1 Besucher hat die WG verewigt.";
+            "👥 Bereits 1 Besucher hat die WG verewigt.";
 
-}
+    }
 
-else{
+    else {
 
-    document.getElementById(
-        "visitorCount"
-    ).textContent =
+        document.getElementById(
+            "visitorCount"
+        ).textContent =
 
-    "👥 Bereits "
-    + data.length
-    + " Besucher haben die WG verewigt.";
+            "👥 Bereits "
+            + data.length
+            + " Besucher haben die WG verewigt.";
 
-}
+    }
 
 
 
@@ -79,78 +79,78 @@ else{
     let randomVisitor;
 
 
-const today =
+    const today =
 
-new Date()
-.toISOString()
-.split("T")[0];
-
-
-
-const savedDate =
-
-localStorage.getItem(
-"dailyVisitorDate"
-);
+        new Date()
+            .toISOString()
+            .split("T")[0];
 
 
 
-const savedVisitor =
+    const savedDate =
 
-localStorage.getItem(
-"dailyVisitor"
-);
-
-
+        localStorage.getItem(
+            "dailyVisitorDate"
+        );
 
 
-if(
-savedDate === today
-&&
-savedVisitor
-){
 
-    randomVisitor =
-    JSON.parse(
+    const savedVisitor =
+
+        localStorage.getItem(
+            "dailyVisitor"
+        );
+
+
+
+
+    if (
+        savedDate === today
+        &&
         savedVisitor
-    );
+    ) {
 
-}
+        randomVisitor =
+            JSON.parse(
+                savedVisitor
+            );
 
-else{
+    }
 
-
-    randomVisitor =
-
-    data[
-        Math.floor(
-            Math.random() * data.length
-        )
-    ];
+    else {
 
 
+        randomVisitor =
 
-    localStorage.setItem(
-
-        "dailyVisitor",
-
-        JSON.stringify(
-            randomVisitor
-        )
-
-    );
+            data[
+            Math.floor(
+                Math.random() * data.length
+            )
+            ];
 
 
-    localStorage.setItem(
 
-        "dailyVisitorDate",
+        localStorage.setItem(
 
-        today
+            "dailyVisitor",
 
-    );
+            JSON.stringify(
+                randomVisitor
+            )
+
+        );
 
 
-}
+        localStorage.setItem(
+
+            "dailyVisitorDate",
+
+            today
+
+        );
+
+
+    }
 
 
 
@@ -250,257 +250,257 @@ loadHomePage();
 
 loadRating();
 
-async function randomVisitor(){
+async function randomVisitor() {
 
 
-const {data,error}=
+    const { data, error } =
 
-await supabaseClient
+        await supabaseClient
 
-.from("visitors")
+            .from("visitors")
 
-.select("*");
+            .select("*");
 
 
 
-if(error){
+    if (error) {
 
-console.error(error);
+        console.error(error);
 
-return;
-
-}
-
-
-
-if(data.length === 0){
-
-return;
-
-}
-
-
-
-const chosenVisitor =
-
-data[
-Math.floor(
-Math.random()*data.length
-)
-];
-
-
-
-const overlay =
-
-document.getElementById(
-"randomOverlay"
-);
-
-
-const nameField =
-
-document.getElementById(
-"randomName"
-);
-
-
-const textField =
-
-document.getElementById(
-"randomText"
-);
-
-
-
-overlay.classList.add("show");
-
-
-
-let counter = 0;
-
-
-const animation = setInterval(()=>{
-
-
-const random =
-
-data[
-Math.floor(
-Math.random()*data.length
-)
-];
-
-
-textField.textContent =
-
-"Suche den nächsten Besucher...";
-
-
-nameField.textContent =
-
-random.name;
-
-
-counter++;
-
-
-
-if(counter >= 20){
-
-
-clearInterval(animation);
-
-
-
-textField.textContent =
-
-"Gefunden! 🎉";
-
-
-
-nameField.textContent =
-
-chosenVisitor.name;
-
-
-
-localStorage.setItem(
-
-"currentVisitor",
-
-JSON.stringify(chosenVisitor)
-
-);
-
-
-
-setTimeout(()=>{
-
-
-window.location.href =
-
-"pages/visitorCard.html";
-
-
-},2000);
-
-
-
-}
-
-
-
-},200);
-
-}
-
-async function loadRating(){
-
-
-const {data,error} =
-
-await supabaseClient
-
-.from("visitors")
-
-.select("rating");
-
-
-if(error){
-
-    console.error(error);
-
-    return;
-
-}
-
-
-const ratings =
-
-data.filter(
-visitor => visitor.rating
-);
-
-
-if(ratings.length === 0){
-
-    return;
-
-}
-
-
-let sum = 0;
-
-
-ratings.forEach(
-visitor => {
-
-    sum += visitor.rating;
-
-});
-
-
-const average =
-
-sum / ratings.length;
-
-
-
-document.getElementById(
-"ratingValue"
-).textContent =
-
-average.toFixed(1)
-+
-" / 10";
-
-
-
-
-const stars =
-
-Math.round(
-average
-*
-2
-)
-/4;
-
-
-
-let starText = "";
-
-
-for(let i=1;i<=5;i++){
-
-
-    if(stars >= i){
-
-        starText += "★";
+        return;
 
     }
 
-    else if(stars >= i-0.5){
 
-        starText += "½";
 
-    }
+    if (data.length === 0) {
 
-    else{
-
-        starText += "☆";
+        return;
 
     }
+
+
+
+    const chosenVisitor =
+
+        data[
+        Math.floor(
+            Math.random() * data.length
+        )
+        ];
+
+
+
+    const overlay =
+
+        document.getElementById(
+            "randomOverlay"
+        );
+
+
+    const nameField =
+
+        document.getElementById(
+            "randomName"
+        );
+
+
+    const textField =
+
+        document.getElementById(
+            "randomText"
+        );
+
+
+
+    overlay.classList.add("show");
+
+
+
+    let counter = 0;
+
+
+    const animation = setInterval(() => {
+
+
+        const random =
+
+            data[
+            Math.floor(
+                Math.random() * data.length
+            )
+            ];
+
+
+        textField.textContent =
+
+            "Suche den nächsten Besucher...";
+
+
+        nameField.textContent =
+
+            random.name;
+
+
+        counter++;
+
+
+
+        if (counter >= 20) {
+
+
+            clearInterval(animation);
+
+
+
+            textField.textContent =
+
+                "Gefunden! 🎉";
+
+
+
+            nameField.textContent =
+
+                chosenVisitor.name;
+
+
+
+            localStorage.setItem(
+
+                "currentVisitor",
+
+                JSON.stringify(chosenVisitor)
+
+            );
+
+
+
+            setTimeout(() => {
+
+
+                window.location.href =
+
+                    "pages/visitorCard.html";
+
+
+            }, 2000);
+
+
+
+        }
+
+
+
+    }, 200);
 
 }
 
+async function loadRating() {
 
-document.getElementById(
-"starRating"
-).textContent =
 
-starText;
+    const { data, error } =
+
+        await supabaseClient
+
+            .from("visitors")
+
+            .select("rating");
+
+
+    if (error) {
+
+        console.error(error);
+
+        return;
+
+    }
+
+
+    const ratings =
+
+        data.filter(
+            visitor => visitor.rating
+        );
+
+
+    if (ratings.length === 0) {
+
+        return;
+
+    }
+
+
+    let sum = 0;
+
+
+    ratings.forEach(
+        visitor => {
+
+            sum += visitor.rating;
+
+        });
+
+
+    const average =
+
+        sum / ratings.length;
+
+
+
+    document.getElementById(
+        "ratingValue"
+    ).textContent =
+
+        average.toFixed(1)
+        +
+        " / 10";
+
+
+
+
+    const stars =
+
+        Math.round(
+            average
+            *
+            2
+        )
+        / 4;
+
+
+
+    let starText = "";
+
+
+    for (let i = 1; i <= 5; i++) {
+
+
+        if (stars >= i) {
+
+            starText += "★";
+
+        }
+
+        else if (stars >= i - 0.5) {
+
+            starText += "½";
+
+        }
+
+        else {
+
+            starText += "☆";
+
+        }
+
+    }
+
+
+    document.getElementById(
+        "starRating"
+    ).textContent =
+
+        starText;
 
 
 }

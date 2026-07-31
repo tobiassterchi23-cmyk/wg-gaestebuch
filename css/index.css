@@ -1,18 +1,18 @@
 body {
 
-    margin:0;
+    margin: 0;
 
-    height:100vh;
+    height: 100vh;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    font-family:Arial,sans-serif;
+    font-family: Arial, sans-serif;
 
-    background:#f5f5f5;
+    background: #f5f5f5;
 
 }
 
@@ -21,18 +21,18 @@ body {
 
 .container {
 
-    background:white;
+    background: white;
 
-    padding:40px;
+    padding: 40px;
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    text-align:center;
+    text-align: center;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
-    max-width:400px;
+    max-width: 400px;
 
 }
 
@@ -41,9 +41,9 @@ body {
 
 h1 {
 
-    font-size:40px;
+    font-size: 40px;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 }
 
@@ -51,7 +51,7 @@ h1 {
 
 h2 {
 
-    font-weight:normal;
+    font-weight: normal;
 
 }
 
@@ -59,9 +59,9 @@ h2 {
 
 p {
 
-    color:#666;
+    color: #666;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 
 }
 
@@ -71,11 +71,11 @@ p {
 
 .buttons {
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    gap:15px;
+    gap: 15px;
 
 }
 
@@ -85,19 +85,19 @@ p {
 
 button {
 
-    padding:15px;
+    padding: 15px;
 
-    font-size:18px;
+    font-size: 18px;
 
-    border:none;
+    border: none;
 
-    border-radius:15px;
+    border-radius: 15px;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    background:#333;
+    background: #333;
 
-    color:white;
+    color: white;
 
 }
 
@@ -107,180 +107,6 @@ button {
 
 button:hover {
 
-    transform:scale(1.03);
+    transform: scale(1.03);
 
-}
-#randomOverlay {
-
-
-    display:none;
-
-
-    position:fixed;
-
-
-    top:0;
-
-    left:0;
-
-
-    width:100%;
-
-    height:100%;
-
-
-    background:rgba(0,0,0,0.45);
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    z-index:9999;
-
-
-}
-
-
-
-.randomBox {
-
-
-    background:white;
-
-
-    width:85%;
-
-
-    max-width:350px;
-
-
-    padding:35px 25px;
-
-
-    border-radius:30px;
-
-
-    text-align:center;
-
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,0.25);
-
-
-    animation:popup 0.4s ease;
-
-
-}
-
-
-
-.randomIcon {
-
-
-    font-size:45px;
-
-
-    margin-bottom:10px;
-
-
-}
-
-
-
-.randomBox h2 {
-
-
-    margin:10px 0;
-
-
-    font-size:26px;
-
-
-}
-
-
-
-#randomText {
-
-
-    color:#777;
-
-
-    margin:15px 0;
-
-
-    font-size:17px;
-
-
-}
-
-
-
-#randomName {
-
-
-    font-size:36px;
-
-
-    margin:20px 0;
-
-
-}
-
-
-
-.randomLoading {
-
-
-    font-size:20px;
-
-
-    animation:pulse 1s infinite;
-
-
-}
-
-
-
-@keyframes popup {
-
-
-    from{
-
-        transform:scale(0.7);
-
-        opacity:0;
-
-    }
-
-
-    to{
-
-        transform:scale(1);
-
-        opacity:1;
-
-    }
-
-}
-
-
-
-@keyframes pulse {
-
-
-    50%{
-
-        opacity:0.4;
-
-    }
-
-}
-
-body {
-    border: 10px solid red;
 }

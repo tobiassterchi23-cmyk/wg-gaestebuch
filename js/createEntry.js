@@ -2,17 +2,17 @@ let currentPage = 1;
 
 const totalPages = 4;
 
-function showPage(){
+function showPage() {
 
 
     const pages =
 
-    document.querySelectorAll(
-        ".formPage"
-    );
+        document.querySelectorAll(
+            ".formPage"
+        );
 
 
-    pages.forEach((page)=>{
+    pages.forEach((page) => {
 
         page.style.display = "none";
 
@@ -35,14 +35,14 @@ function showPage(){
 
 }
 
-function updateProgressBar(){
+function updateProgressBar() {
 
 
     const percentage =
 
-    (currentPage / totalPages)
+        (currentPage / totalPages)
 
-    *100;
+        * 100;
 
 
 
@@ -60,94 +60,97 @@ function updateProgressBar(){
 
     ).textContent =
 
-    "Seite "
+        "Seite "
 
-    + currentPage
+        + currentPage
 
-    + " von "
+        + " von "
 
-    + totalPages;
+        + totalPages;
 
 
 }
 
-function updateButtons(){
+function updateButtons() {
 
 
     const backButton =
 
-    document.getElementById(
-        "backButton"
-    );
+        document.getElementById(
+            "backButton"
+        );
 
 
     const nextButton =
 
-    document.getElementById(
-        "nextButton"
-    );
+        document.getElementById(
+            "nextButton"
+        );
 
 
     const saveButton =
 
-    document.getElementById(
-        "saveButton"
-    );
+        document.getElementById(
+            "saveButton"
+        );
 
 
 
-    backButton.style.display =
-    "inline-block";
+    backButton.style.visibility =
+        "visible";
 
 
     nextButton.style.display =
-    "inline-block";
+        "inline-block";
 
 
     saveButton.style.display =
-    "none";
-
-
-
-    if(currentPage === 1){
-
-        backButton.style.display =
         "none";
+
+
+
+    if (currentPage === 1) {
+
+        backButton.style.visibility =
+            "hidden";
 
     }
 
 
 
-    if(currentPage === totalPages){
+    if (currentPage === totalPages) {
 
-        nextButton.style.display =
-        "none";
+        nextButton.style.visibility =
+            "hidden";
 
 
         saveButton.style.display =
-        "inline-block";
+            "inline-block";
 
     }
+
+    nextButton.style.visibility =
+        "visible";
 
 
 }
 
-function nextPage(){
+function nextPage() {
 
 
-    if(currentPage === 1){
+    if (currentPage === 1) {
 
 
-        const name = 
-        document.getElementById("name").value;
+        const name =
+            document.getElementById("name").value;
 
 
         const photo =
-        document.getElementById("photo").files[0];
+            document.getElementById("photo").files[0];
 
 
 
-        if(!name){
+        if (!name) {
 
             alert(
                 "Bitte gib deinen Namen ein."
@@ -159,7 +162,7 @@ function nextPage(){
 
 
 
-        if(!photo){
+        if (!photo) {
 
             alert(
                 "Bitte füge ein Foto hinzu."
@@ -174,7 +177,7 @@ function nextPage(){
 
 
 
-    if(
+    if (
 
         currentPage
 
@@ -182,7 +185,7 @@ function nextPage(){
 
         totalPages
 
-    ){
+    ) {
 
         currentPage++;
 
@@ -195,10 +198,10 @@ function nextPage(){
 
 
 
-function previousPage(){
+function previousPage() {
 
 
-    if(
+    if (
 
         currentPage
 
@@ -206,7 +209,7 @@ function previousPage(){
 
         1
 
-    ){
+    ) {
 
         currentPage--;
 
@@ -222,57 +225,57 @@ console.log("Create Entry geladen");
 
 function getVisitorData() {
 
-    return{
+    return {
 
-    name:
-    document.getElementById("name").value,
+        name:
+            document.getElementById("name").value,
 
-    birthday:
-    document.getElementById("birthday").value,
+        birthday:
+            document.getElementById("birthday").value,
 
-    relationship:
-    document.getElementById("relationship").value,
+        relationship:
+            document.getElementById("relationship").value,
 
-    legendStatus:
-    null,
+        legendStatus:
+            null,
 
-    funFacts:
-    document.getElementById("funFacts").value,
+        funFacts:
+            document.getElementById("funFacts").value,
 
-    dreamJob:
-    document.getElementById("dreamJob").value,
+        dreamJob:
+            document.getElementById("dreamJob").value,
 
-    potato:
-    document.getElementById("potato").value,
+        potato:
+            document.getElementById("potato").value,
 
-    stayReason:
-    document.getElementById("stayReason").value,
+        stayReason:
+            document.getElementById("stayReason").value,
 
-    knownFrom:
-    document.getElementById("knownFrom").value,
+        knownFrom:
+            document.getElementById("knownFrom").value,
 
-    favoriteItem:
-    document.getElementById("favoriteItem").value,
+        favoriteItem:
+            document.getElementById("favoriteItem").value,
 
-    song:
-    document.getElementById("song").value,
+        song:
+            document.getElementById("song").value,
 
-    message:
-    document.getElementById("message").value,
+        message:
+            document.getElementById("message").value,
 
-    lastThought:
-    document.getElementById("lastThought").value,
+        lastThought:
+            document.getElementById("lastThought").value,
 
-    rating:
-    Number(
-        document.getElementById("rating").value
-    ),
+        rating:
+            Number(
+                document.getElementById("rating").value
+            ),
 
-    photo:
-    document.getElementById("photo")
-    .files[0]
+        photo:
+            document.getElementById("photo")
+                .files[0]
 
-};
+    };
 
 }
 
@@ -280,56 +283,56 @@ function getVisitorData() {
 async function saveEntry() {
 
     document.getElementById(
-    "saveButton"
-).disabled = true;
+        "saveButton"
+    ).disabled = true;
 
 
-document.getElementById(
-    "loadingMessage"
-).style.display = "block";
+    document.getElementById(
+        "loadingMessage"
+    ).style.display = "block";
 
     console.log("1. saveEntry gestartet");
 
 
     const data = getVisitorData();
 
-    if(!data.name){
+    if (!data.name) {
 
-    alert(
+        alert(
 
-        "Bitte gib deinen Namen ein."
+            "Bitte gib deinen Namen ein."
 
-    );
+        );
 
-    return;
+        return;
 
-}
-
-
-if(!data.photo){
-
-    alert(
-
-        "Bitte nimm zuerst ein Foto auf."
-
-    );
-
-    return;
-
-}
+    }
 
 
-if(!data.rating){
+    if (!data.photo) {
 
-    alert(
+        alert(
 
-        "Bitte bewerte den WG-Abend."
+            "Bitte nimm zuerst ein Foto auf."
 
-    );
+        );
 
-    return;
+        return;
 
-}
+    }
+
+
+    if (!data.rating) {
+
+        alert(
+
+            "Bitte bewerte den WG-Abend."
+
+        );
+
+        return;
+
+    }
 
     console.log("2. Daten geladen:");
     console.log(data);
@@ -343,20 +346,20 @@ if(!data.rating){
         await getVisitorNumber();
 
     console.log(
-    "Normale Besuchernummer:",
-    visitorNumber
-);
+        "Normale Besuchernummer:",
+        visitorNumber
+    );
 
-// TESTMODUS
-// Zum Testen Easter-Egg Nummer eintragen
+    // TESTMODUS
+    // Zum Testen Easter-Egg Nummer eintragen
 
-const testVisitorNumber = null;
+    const testVisitorNumber = null;
 
-// Wenn testen beendet:
-// testVisitorNumber = null setzen
+    // Wenn testen beendet:
+    // testVisitorNumber = null setzen
 
-const finalVisitorNumber =
-    testVisitorNumber ?? visitorNumber;
+    const finalVisitorNumber =
+        testVisitorNumber ?? visitorNumber;
 
     console.log(
         "4. Besuchernummer:",
@@ -366,9 +369,9 @@ const finalVisitorNumber =
 
     const photoUrl =
 
-    await uploadPhoto(
-        data.photo
-    );
+        await uploadPhoto(
+            data.photo
+        );
 
     console.log(
         "5. Photo URL:",
@@ -378,10 +381,10 @@ const finalVisitorNumber =
 
     const visitor =
 
-    createVisitor(
-    data,
-    finalVisitorNumber
-    );
+        createVisitor(
+            data,
+            finalVisitorNumber
+        );
 
     console.log(
         "6. Visitor Objekt:"
@@ -391,14 +394,14 @@ const finalVisitorNumber =
 
 
     visitor.photo_url =
-    photoUrl;
+        photoUrl;
 
 
     const savedVisitor =
 
-    await saveVisitor(
-        visitor
-    );
+        await saveVisitor(
+            visitor
+        );
 
 
     console.log(
@@ -410,7 +413,7 @@ const finalVisitorNumber =
     );
 
 
-    if(savedVisitor){
+    if (savedVisitor) {
 
         console.log(
             "8. Weiterleitung wird ausgeführt"
@@ -429,7 +432,7 @@ const finalVisitorNumber =
 
 
         window.location.href =
-        "visitorCard.html";
+            "visitorCard.html";
 
     }
 

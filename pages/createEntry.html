@@ -1,17 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Neuer Eintrag</title>
 
-    <link rel="stylesheet"
-    href="../css/createEntry.css">
+    <link rel="stylesheet" href="../css/createEntry.css">
 
 </head>
 
@@ -19,257 +16,215 @@
 <body>
 
 
-<h1>Neuer Eintrag</h1>
+    <h1>Neuer Eintrag</h1>
 
 
-<form>
+    <form>
 
-<p id="progressText">
+        <p id="progressText">
 
-Seite 1 von 4
+            Seite 1 von 4
 
-</p>
+        </p>
 
 
-<progress
-id="progressBar"
-value="25"
-max="100">
+        <progress id="progressBar" value="25" max="100">
 
-</progress>
+        </progress>
 
 
 
-<div
-class="formPage"
-id="page1">
+        <div class="formPage" id="page1">
 
-<h2>Wer bist du?</h2>
+            <h2>Wer bist du?</h2>
 
 
-<p>Name*</p>
-<input id="name" type="text" required>
+            <p>Name*</p>
+            <input id="name" type="text" required>
 
 
-<p>Foto*</p>
+            <p>Foto*</p>
 
-<input
+            <input id="photo" type="file" accept="image/*" capture="user" required hidden>
 
-id="photo"
 
-type="file"
+            <label for="photo" class="photoButton">
 
-accept="image/*"
+                📷 Foto aufnehmen
 
-capture="user"
+            </label>
 
-required
 
-hidden
+            <p>Geburtsdatum</p>
+            <input id="birthday" type="date">
 
->
 
+            <p>Beziehungsstatus</p>
+            <input id="relationship" type="text">
 
-<label
-for="photo"
-class="photoButton">
 
-📷 Foto aufnehmen
+            <p>Fun-Facts über dich</p>
 
-</label>
+            <textarea id="funFacts"></textarea>
 
+        </div>
 
-<p>Geburtsdatum</p>
-<input id="birthday" type="date">
 
 
-<p>Beziehungsstatus</p>
-<input id="relationship" type="text">
+        <div class="formPage" id="page2">
 
+            <h2>Die wirklich wichtigen Fragen</h2>
 
-<p>Fun-Facts über dich</p>
 
-<textarea id="funFacts"></textarea>
+            <p>
+                Das will ich einmal werden,
+                wenn ich gross bin
+            </p>
 
-</div>
+            <textarea id="dreamJob"></textarea>
 
 
+            <p>
+                Wenn du eine Kartoffel wärst,
+                zu welcher Speise würdest du am
+                liebsten verarbeitet werden?
+            </p>
 
-<div
-class="formPage"
-id="page2">
+            <textarea id="potato"></textarea>
 
-<h2>Die wirklich wichtigen Fragen</h2>
 
+            <p>Grund des Aufenthaltes</p>
 
-<p>
-Das will ich einmal werden,
-wenn ich gross bin
-</p>
+            <input id="stayReason" type="text">
 
-<textarea id="dreamJob"></textarea>
+        </div>
 
 
-<p>
-Wenn du eine Kartoffel wärst,
-zu welcher Speise würdest du am
-liebsten verarbeitet werden?
-</p>
 
-<textarea id="potato"></textarea>
+        <div class="formPage" id="page3">
 
+            <h2>Du & die WG</h2>
 
-<p>Grund des Aufenthaltes</p>
 
-<input id="stayReason" type="text">
+            <p>
+                WG-Legendenstatus
+            </p>
 
-</div>
+            <p>
+                Wird automatisch vergeben 😉
+            </p>
 
 
+            <p>Woher kennst du die WG?</p>
 
-<div
-class="formPage"
-id="page3">
+            <input id="knownFrom" type="text">
 
-<h2>Du & die WG</h2>
 
+            <p>Lieblingsitem der WG?</p>
 
-<p>
-WG-Legendenstatus
-</p>
+            <input id="favoriteItem" type="text">
 
-<p>
-Wird automatisch vergeben 😉
-</p>
 
+            <p>
+                Dieser Song muss unbedingt auf die
+                WG-Playlist
+            </p>
 
-<p>Woher kennst du die WG?</p>
+            <input id="song" type="text">
 
-<input id="knownFrom" type="text">
+        </div>
 
 
-<p>Lieblingsitem der WG?</p>
 
-<input id="favoriteItem" type="text">
+        <div class="formPage" id="page4">
 
+            <h2>Zum Schluss...</h2>
 
-<p>
-Dieser Song muss unbedingt auf die
-WG-Playlist
-</p>
 
-<input id="song" type="text">
+            <p>
+                Nachricht an zukünftige Besucher
+            </p>
 
-</div>
+            <textarea id="message"></textarea>
 
 
+            <p>
+                Mein letzter Gedanke bevor ich
+                nach Hause gehe
+            </p>
 
-<div
-class="formPage"
-id="page4">
+            <textarea id="lastThought"></textarea>
 
-<h2>Zum Schluss...</h2>
 
+            <p>
+                Bewertung des WG-Abends (1-10)
+            </p>
 
-<p>
-Nachricht an zukünftige Besucher
-</p>
+            <input id="rating" type="number" min="1" max="10">
 
-<textarea id="message"></textarea>
+            <p>
+                Noch ein letzter Klick und du bist
+                <br>
+                für immer Teil der WG-Geschichte.
+            </p>
 
+        </div>
 
-<p>
-Mein letzter Gedanke bevor ich
-nach Hause gehe
-</p>
 
-<textarea id="lastThought"></textarea>
 
+        <br>
+        <br>
 
-<p>
-Bewertung des WG-Abends (1-10)
-</p>
 
-<input
-id="rating"
-type="number"
-min="1"
-max="10">
+        <div class="buttonContainer">
 
-<p>
-Noch ein letzter Klick und du bist
-<br>
-für immer Teil der WG-Geschichte.
-</p>
 
-</div>
+            <button id="backButton" type="button" onclick="previousPage()">
 
+                ← Zurück
 
+            </button>
 
-<br>
-<br>
 
 
-<div class="buttonContainer">
+            <button id="nextButton" type="button" onclick="nextPage()">
 
+                Weiter →
 
-<button
-id="backButton"
-type="button"
-onclick="previousPage()">
+            </button>
 
-← Zurück
 
-</button>
 
+            <button id="saveButton" type="button" onclick="saveEntry()">
 
+                Eintrag abschliessen
 
-<button
-id="nextButton"
-type="button"
-onclick="nextPage()">
+            </button>
 
-Weiter →
 
-</button>
+            <p id="loadingMessage" style="display:none;">
 
+                ⏳ Dein Eintrag wird gespeichert...
 
+            </p>
 
-<button
-id="saveButton"
-type="button"
-onclick="saveEntry()">
 
-Eintrag abschliessen
+        </div>
 
-</button>
 
+    </form>
 
-<p id="loadingMessage"
-style="display:none;">
 
-⏳ Dein Eintrag wird gespeichert...
 
-</p>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
+    <script src="../js/supabase.js"></script>
 
-</div>
+    <script src="../js/helpers.js"></script>
 
-
-</form>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script src="../js/supabase.js"></script>
-
-<script src="../js/helpers.js"></script>
-
-<script src="../js/createEntry.js"></script>
+    <script src="../js/createEntry.js"></script>
 
 
 </body>
 
 </html>
-

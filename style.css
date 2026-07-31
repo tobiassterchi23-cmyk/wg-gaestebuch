@@ -4,13 +4,13 @@ body {
     font-family: Arial, sans-serif;
 
 
-    background:#f5f5f5;
+    background: #f5f5f5;
 
 
-    padding:25px;
+    padding: 25px;
 
 
-    text-align:center;
+    text-align: center;
 
 
 }
@@ -20,10 +20,10 @@ body {
 h1 {
 
 
-    font-size:40px;
+    font-size: 40px;
 
 
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 
 }
@@ -33,7 +33,7 @@ h1 {
 h3 {
 
 
-    font-weight:normal;
+    font-weight: normal;
 
 
 }
@@ -43,36 +43,36 @@ h3 {
 button {
 
 
-    width:100%;
+    width: 100%;
 
 
-    max-width:350px;
+    max-width: 350px;
 
 
-    padding:18px;
+    padding: 18px;
 
 
-    margin:10px;
+    margin: 10px;
 
 
-    font-size:20px;
+    font-size: 20px;
 
 
-    border:none;
+    border: none;
 
 
-    border-radius:25px;
+    border-radius: 25px;
 
 
-    background:white;
+    background: white;
 
 
-    cursor:pointer;
+    cursor: pointer;
 
 
     box-shadow:
 
-    0 8px 20px rgba(0,0,0,0.15);
+        0 8px 20px rgba(0, 0, 0, 0.15);
 
 
 }
@@ -82,7 +82,7 @@ button {
 button:active {
 
 
-    transform:scale(0.97);
+    transform: scale(0.97);
 
 
 }
@@ -92,24 +92,24 @@ button:active {
 #visitorOfDay {
 
 
-    margin:30px auto;
+    margin: 30px auto;
 
 
-    padding:25px;
+    padding: 25px;
 
 
-    max-width:350px;
+    max-width: 350px;
 
 
-    background:white;
+    background: white;
 
 
-    border-radius:30px;
+    border-radius: 30px;
 
 
     box-shadow:
 
-    0 10px 30px rgba(0,0,0,0.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
 
 }
@@ -119,16 +119,16 @@ button:active {
 #dailyPhoto {
 
 
-    width:150px;
+    width: 150px;
 
 
-    height:150px;
+    height: 150px;
 
 
-    object-fit:cover;
+    object-fit: cover;
 
 
-    border-radius:50%;
+    border-radius: 50%;
 
 
 }
@@ -138,10 +138,10 @@ button:active {
 #dailyName {
 
 
-    font-size:28px;
+    font-size: 28px;
 
 
-    margin:15px 0 5px;
+    margin: 15px 0 5px;
 
 
 }
@@ -151,66 +151,66 @@ button:active {
 #dailyRating {
 
 
-    font-size:22px;
+    font-size: 22px;
 
 
-    font-weight:bold;
+    font-weight: bold;
 
 
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
 
 
-body{
+    body {
 
-    padding:15px;
+        padding: 15px;
 
-}
-
-
-h1{
-
-    font-size:32px;
-
-}
+    }
 
 
-h3{
+    h1 {
 
-    font-size:18px;
+        font-size: 32px;
 
-}
+    }
 
 
+    h3 {
 
-button{
+        font-size: 18px;
 
-    width:90%;
-
-    max-width:350px;
-
-    padding:15px;
-
-    font-size:18px;
-
-    border-radius:25px;
-
-}
+    }
 
 
 
-#visitorOfDay img{
+    button {
 
-    width:120px;
+        width: 90%;
 
-    height:120px;
+        max-width: 350px;
 
-    object-fit:cover;
+        padding: 15px;
 
-    border-radius:50%;
+        font-size: 18px;
 
-}
+        border-radius: 25px;
+
+    }
+
+
+
+    #visitorOfDay img {
+
+        width: 120px;
+
+        height: 120px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+
+    }
 
 
 }
@@ -218,142 +218,143 @@ button{
 button {
 
 
-    background:white;
+    background: white;
 
 
-    border:none;
+    border: none;
 
 
-    padding:14px 25px;
+    padding: 14px 25px;
 
 
-    font-size:18px;
+    font-size: 18px;
 
 
-    border-radius:30px;
+    border-radius: 30px;
 
 
-    cursor:pointer;
+    cursor: pointer;
 
 
     box-shadow:
 
-    0 5px 15px rgba(0,0,0,0.15);
+        0 5px 15px rgba(0, 0, 0, 0.15);
 
 
-    margin:8px;
-
-
-}
-
-
-
-button:hover{
-
-
-    transform:scale(1.03);
+    margin: 8px;
 
 
 }
 
 
 
-button:active{
+button:hover {
 
 
-    transform:scale(0.98);
+    transform: scale(1.03);
 
 
 }
+
+
+
+button:active {
+
+
+    transform: scale(0.98);
+
+
+}
+
 #visitorCount {
 
 
-    max-width:350px;
+    max-width: 350px;
 
 
-    margin:30px auto;
+    margin: 30px auto;
 
 
-    padding:15px 20px;
+    padding: 15px 20px;
 
 
-    text-align:center;
+    text-align: center;
 
 
-    font-size:18px;
+    font-size: 18px;
 
 
-    background:#eeeeee;
+    background: #eeeeee;
 
 
-    border-radius:15px;
+    border-radius: 15px;
 
 
-    border-left:6px solid #888;
+    border-left: 6px solid #888;
 
 
 }
 
 #randomOverlay {
 
-    display:none;
+    display: none;
 
-    position:fixed;
+    position: fixed;
 
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    background:rgba(245,245,245,0.85);
+    background: rgba(245, 245, 245, 0.85);
 
-    backdrop-filter:blur(6px);
+    backdrop-filter: blur(6px);
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    z-index:9999;
+    z-index: 9999;
 
 }
 
 #randomOverlay.show {
 
-    display:flex;
+    display: flex;
 
 }
 
 .randomBox {
 
 
-    background:white;
+    background: white;
 
 
-    width:85%;
+    width: 85%;
 
 
-    max-width:380px;
+    max-width: 380px;
 
 
-    padding:40px 30px;
+    padding: 40px 30px;
 
 
-    border-radius:30px;
+    border-radius: 30px;
 
 
-    text-align:center;
+    text-align: center;
 
 
     box-shadow:
 
-    0 20px 50px rgba(0,0,0,0.18);
+        0 20px 50px rgba(0, 0, 0, 0.18);
 
 
-    border:1px solid #eee;
+    border: 1px solid #eee;
 
 
-    animation:popup 0.35s ease;
+    animation: popup 0.35s ease;
 
 
 }
@@ -363,10 +364,10 @@ button:active{
 .randomIcon {
 
 
-    font-size:50px;
+    font-size: 50px;
 
 
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 
 }
@@ -376,13 +377,13 @@ button:active{
 .randomBox h2 {
 
 
-    font-size:26px;
+    font-size: 26px;
 
 
-    margin:10px 0;
+    margin: 10px 0;
 
 
-    color:#333;
+    color: #333;
 
 
 }
@@ -392,13 +393,13 @@ button:active{
 #randomText {
 
 
-    font-size:18px;
+    font-size: 18px;
 
 
-    color:#777;
+    color: #777;
 
 
-    margin:20px 0;
+    margin: 20px 0;
 
 
 }
@@ -408,13 +409,13 @@ button:active{
 #randomName {
 
 
-    font-size:38px;
+    font-size: 38px;
 
 
-    margin:20px 0;
+    margin: 20px 0;
 
 
-    color:#222;
+    color: #222;
 
 
 }
@@ -424,10 +425,10 @@ button:active{
 .randomLoading {
 
 
-    font-size:22px;
+    font-size: 22px;
 
 
-    animation:pulse 1s infinite;
+    animation: pulse 1s infinite;
 
 
 }
@@ -440,10 +441,10 @@ button:active{
     from {
 
 
-        transform:scale(0.8);
+        transform: scale(0.8);
 
 
-        opacity:0;
+        opacity: 0;
 
 
     }
@@ -452,10 +453,10 @@ button:active{
     to {
 
 
-        transform:scale(1);
+        transform: scale(1);
 
 
-        opacity:1;
+        opacity: 1;
 
 
     }
@@ -470,7 +471,7 @@ button:active{
     50% {
 
 
-        opacity:0.3;
+        opacity: 0.3;
 
 
     }
@@ -479,73 +480,73 @@ button:active{
 
 .cookieNotice {
 
-    margin:40px auto 10px auto;
+    margin: 40px auto 10px auto;
 
-    max-width:600px;
+    max-width: 600px;
 
-    padding:0 20px;
+    padding: 0 20px;
 
-    font-size:12px;
+    font-size: 12px;
 
-    line-height:1.5;
+    line-height: 1.5;
 
-    color:#888;
+    color: #888;
 
-    text-align:center;
+    text-align: center;
 
 }
 
-#ratingBox{
+#ratingBox {
 
-    max-width:350px;
+    max-width: 350px;
 
-    margin:30px auto;
+    margin: 30px auto;
 
-    padding:25px;
+    padding: 25px;
 
-    background:white;
+    background: white;
 
-    border-radius:30px;
+    border-radius: 30px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
 }
 
 
-#ratingBox h2{
+#ratingBox h2 {
 
-    margin-top:0;
-
-}
-
-
-#starRating{
-
-    font-size:35px;
-
-    color:#FFD700;
-
-    margin:10px 0;
+    margin-top: 0;
 
 }
 
 
-#ratingValue{
+#starRating {
 
-    font-size:24px;
+    font-size: 35px;
 
-    font-weight:bold;
+    color: #FFD700;
 
-    color:#333;
+    margin: 10px 0;
 
 }
 
 
-#ratingCount{
+#ratingValue {
 
-    color:#777;
+    font-size: 24px;
 
-    margin-bottom:0;
+    font-weight: bold;
+
+    color: #333;
+
+}
+
+
+#ratingCount {
+
+    color: #777;
+
+    margin-bottom: 0;
 
 }
