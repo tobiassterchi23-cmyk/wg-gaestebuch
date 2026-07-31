@@ -177,13 +177,19 @@ button {
 
 .buttonContainer {
 
-    display: flex;
+    display:flex;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
-    align-items: center;
+    align-items:center;
 
-    margin-top: 30px;
+    margin-top:30px;
+
+    width:90%;
+
+    margin-left:auto;
+
+    margin-right:auto;
 
 }
 
@@ -243,5 +249,24 @@ button {
 
     margin: 20px auto;
 
+
+}
+
+@media(max-width:600px){
+
+.buttonContainer{
+
+    width:95%;
+
+}
+
+
+.buttonContainer button{
+
+    min-width:120px;
+
+    font-size:16px;
+
+}
 
 }
