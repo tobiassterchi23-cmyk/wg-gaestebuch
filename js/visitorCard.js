@@ -3,6 +3,7 @@ const savedVisitor = localStorage.getItem(
 );
 
 
+
 if(!savedVisitor){
 
     console.error(
@@ -17,6 +18,107 @@ const visitor = JSON.parse(
     savedVisitor
 );
 
+const welcomeMessages = [
+
+"Willkommen im Gästebuch!",
+
+"Schön, dass du da warst!",
+
+"Ein weiterer Abend.\nEine weitere Geschichte."
+
+];
+
+
+const randomMessage =
+
+welcomeMessages[
+
+Math.floor(
+Math.random()
+*
+welcomeMessages.length
+)
+
+];
+
+
+// Standardnachricht setzen
+
+document.getElementById(
+"welcomeTitle"
+).textContent =
+
+randomMessage;
+
+
+
+// Easter Eggs überschreiben die Standardnachricht
+
+if(visitor.has_crown){
+
+    document.getElementById(
+    "welcomeTitle"
+    ).textContent =
+
+    "👑 LEGENDÄR!";
+
+}
+
+
+else if(
+visitor.visitor_number === 69
+){
+
+    document.getElementById(
+    "welcomeTitle"
+    ).textContent =
+
+    "😏 Nice.";
+
+}
+
+
+else if(
+visitor.visitor_number === 67
+){
+
+    document.getElementById(
+    "welcomeTitle"
+    ).textContent =
+
+    "⭐ Legendärer Besuch!";
+
+}
+
+
+else if(
+visitor.visitor_number % 10 === 0
+){
+
+    document.getElementById(
+    "welcomeTitle"
+    ).textContent =
+
+    "🎉 Runder Besuch!";
+
+}
+
+
+// Besuchertext anzeigen
+
+document.getElementById(
+"welcomeText"
+).innerHTML =
+
+"Du bist Besucher #"
+
++
+
+visitor.visitor_number
+
++
+
+" der<br>Wankdorf-WG.";
 
 function getStatus(visitor){
 

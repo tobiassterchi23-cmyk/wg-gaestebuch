@@ -418,3 +418,54 @@ button {
 
 
 }
+
+#welcomeBox{
+
+
+    background:white;
+
+
+    padding:20px;
+
+
+    margin-bottom:25px;
+
+
+    border-radius:20px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,0.1);
+
+
+}
+
+
+
+#welcomeTitle{
+
+
+    margin-top:0;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+#welcomeText{
+
+
+    margin-bottom:0;
+
+
+    line-height:1.6;
+
+
+}

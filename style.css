@@ -293,3 +293,186 @@ button:active{
 
 
 }
+
+#randomOverlay {
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(245,245,245,0.85);
+
+    backdrop-filter:blur(6px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+#randomOverlay.show {
+
+    display:flex;
+
+}
+
+.randomBox {
+
+
+    background:white;
+
+
+    width:85%;
+
+
+    max-width:380px;
+
+
+    padding:40px 30px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,0.18);
+
+
+    border:1px solid #eee;
+
+
+    animation:popup 0.35s ease;
+
+
+}
+
+
+
+.randomIcon {
+
+
+    font-size:50px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.randomBox h2 {
+
+
+    font-size:26px;
+
+
+    margin:10px 0;
+
+
+    color:#333;
+
+
+}
+
+
+
+#randomText {
+
+
+    font-size:18px;
+
+
+    color:#777;
+
+
+    margin:20px 0;
+
+
+}
+
+
+
+#randomName {
+
+
+    font-size:38px;
+
+
+    margin:20px 0;
+
+
+    color:#222;
+
+
+}
+
+
+
+.randomLoading {
+
+
+    font-size:22px;
+
+
+    animation:pulse 1s infinite;
+
+
+}
+
+
+
+@keyframes popup {
+
+
+    from {
+
+
+        transform:scale(0.8);
+
+
+        opacity:0;
+
+
+    }
+
+
+    to {
+
+
+        transform:scale(1);
+
+
+        opacity:1;
+
+
+    }
+
+}
+
+
+
+@keyframes pulse {
+
+
+    50% {
+
+
+        opacity:0.3;
+
+
+    }
+
+}
