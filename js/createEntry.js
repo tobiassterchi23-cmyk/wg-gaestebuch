@@ -118,16 +118,16 @@ function updateButtons() {
 
 
 
-    if (currentPage === totalPages) {
+    if(currentPage === totalPages){
 
-        nextButton.style.visibility =
-            "hidden";
+    nextButton.style.display =
+    "none";
 
 
-        saveButton.style.display =
-            "inline-block";
+    saveButton.style.display =
+    "inline-block";
 
-    }
+}
 
     nextButton.style.visibility =
         "visible";
