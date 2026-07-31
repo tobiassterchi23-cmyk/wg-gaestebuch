@@ -248,6 +248,8 @@ function openDailyVisitor() {
 
 loadHomePage();
 
+loadRating();
+
 async function randomVisitor(){
 
 
@@ -393,3 +395,112 @@ window.location.href =
 
 }
 
+async function loadRating(){
+
+
+const {data,error} =
+
+await supabaseClient
+
+.from("visitors")
+
+.select("rating");
+
+
+if(error){
+
+    console.error(error);
+
+    return;
+
+}
+
+
+const ratings =
+
+data.filter(
+visitor => visitor.rating
+);
+
+
+if(ratings.length === 0){
+
+    return;
+
+}
+
+
+let sum = 0;
+
+
+ratings.forEach(
+visitor => {
+
+    sum += visitor.rating;
+
+});
+
+
+const average =
+
+sum / ratings.length;
+
+
+
+document.getElementById(
+"ratingValue"
+).textContent =
+
+average.toFixed(1)
++
+" / 10";
+
+
+
+
+const stars =
+
+Math.round(
+average
+*
+2
+)
+/4;
+
+
+
+let starText = "";
+
+
+for(let i=1;i<=5;i++){
+
+
+    if(stars >= i){
+
+        starText += "★";
+
+    }
+
+    else if(stars >= i-0.5){
+
+        starText += "½";
+
+    }
+
+    else{
+
+        starText += "☆";
+
+    }
+
+}
+
+
+document.getElementById(
+"starRating"
+).textContent =
+
+starText;
+
+
+}

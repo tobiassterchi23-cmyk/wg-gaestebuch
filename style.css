@@ -476,3 +476,76 @@ button:active{
     }
 
 }
+
+.cookieNotice {
+
+    margin:40px auto 10px auto;
+
+    max-width:600px;
+
+    padding:0 20px;
+
+    font-size:12px;
+
+    line-height:1.5;
+
+    color:#888;
+
+    text-align:center;
+
+}
+
+#ratingBox{
+
+    max-width:350px;
+
+    margin:30px auto;
+
+    padding:25px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+#ratingBox h2{
+
+    margin-top:0;
+
+}
+
+
+#starRating{
+
+    font-size:35px;
+
+    color:#FFD700;
+
+    margin:10px 0;
+
+}
+
+
+#ratingValue{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    color:#333;
+
+}
+
+
+#ratingCount{
+
+    color:#777;
+
+    margin-bottom:0;
+
+}
