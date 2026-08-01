@@ -185,12 +185,17 @@ else {
 
     document.getElementById(
         "visitorAge"
-    ).textContent =
-        visitor.age
-            ?
-            visitor.age + " Jahre"
-            :
-            "Alter unbekannt";
+    ).innerHTML =
+
+        "<strong>Alter</strong><br>" +
+
+        (
+            visitor.age
+                ?
+                visitor.age + " Jahre"
+                :
+                "Unbekannt"
+        );
 
 
     document.getElementById(
@@ -222,86 +227,87 @@ else {
 
     document.getElementById(
         "visitDate"
-    ).textContent =
+    ).innerHTML =
+
+        "<strong>Besucht am</strong><br>" +
+
         new Date(visitor.visit_date)
-            .toLocaleDateString(
-                "de-CH"
-            );
+            .toLocaleDateString("de-CH");
 
     document.getElementById(
         "relationship"
-    ).textContent =
-        "Beziehungsstatus: " +
+    ).innerHTML =
+        "<strong>Beziehungsstatus</strong><br>" +
         (visitor.relationship_status || "-");
 
 
     document.getElementById(
         "funFacts"
-    ).textContent =
-        "Fun-Facts: " +
+    ).innerHTML =
+        "<strong>Fun-Facts über dich</strong><br>" +
         (visitor.fun_facts || "-");
 
 
     document.getElementById(
         "dreamJob"
-    ).textContent =
-        "Das will ich einmal werden: " +
+    ).innerHTML =
+        "<strong>Das will ich einmal werden, wenn ich gross bin</strong><br>" +
         (visitor.dream_job || "-");
 
 
     document.getElementById(
         "potato"
-    ).textContent =
-        "Kartoffelfrage: " +
+    ).innerHTML =
+        "<strong>Wenn du eine Kartoffel wärst, zu welcher Speise würdest du am liebsten verarbeitet werden?</strong><br>" +
         (visitor.potato_answer || "-");
 
 
     document.getElementById(
         "stayReason"
-    ).textContent =
-        "Grund des Aufenthalts: " +
+    ).innerHTML =
+        "<strong>Grund des Aufenthaltes</strong><br>" +
         (visitor.stay_reason || "-");
 
 
     document.getElementById(
         "knownFrom"
-    ).textContent =
-        "Woher kenne ich die WG: " +
+    ).innerHTML =
+        "<strong>Woher kennst du die WG?</strong><br>" +
         (visitor.known_from || "-");
 
 
     document.getElementById(
         "favoriteItem"
-    ).textContent =
-        "Lieblingsitem der WG: " +
+    ).innerHTML =
+        "<strong>Lieblingsitem der WG?</strong><br>" +
         (visitor.favorite_item || "-");
 
 
     document.getElementById(
         "song"
-    ).textContent =
-        "WG-Playlist: " +
+    ).innerHTML =
+        "<strong>Dieser Song muss unbedingt auf die WG-Playlist</strong><br>" +
         (visitor.playlist_song || "-");
 
 
     document.getElementById(
         "message"
-    ).textContent =
-        "Nachricht an zukünftige Besucher: " +
+    ).innerHTML =
+        "<strong>Nachricht an zukünftige Besucher</strong><br>" +
         (visitor.future_message || "-");
 
 
     document.getElementById(
         "lastThought"
-    ).textContent =
-        "Mein letzter Gedanke: " +
+    ).innerHTML =
+        "<strong>Mein letzter Gedanke bevor ich nach Hause gehe</strong><br>" +
         (visitor.last_thought || "-");
 
 
     document.getElementById(
         "rating"
-    ).textContent =
-        "Bewertung des WG-Abends: " +
+    ).innerHTML =
+        "<strong>Bewertung des WG-Abends</strong><br>" +
         (visitor.rating || "-") +
         "/10";
 
